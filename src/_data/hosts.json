@@ -1,0 +1,35 @@
+{
+    "Node 001": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-001/health/badge.svg"
+    },
+    "Node 002": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-002/health/badge.svg"
+    },
+    "Node 003": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-003/health/badge.svg"
+    },
+    "Node 004": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-004/health/badge.svg"
+    },
+    "Node 005": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-005/health/badge.svg"
+    },
+    "Node 006": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-006/health/badge.svg"
+    },
+    "Node 007": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-007/health/badge.svg"
+    },
+    "Node 008": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-008/health/badge.svg"
+    },
+    "Node 009": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-009/health/badge.svg"
+    },
+    "Node 010": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-010/health/badge.svg"
+    },
+    "Node 011": {
+        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-011/health/badge.svg"
+    }
+}
