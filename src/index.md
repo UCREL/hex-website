@@ -16,7 +16,7 @@ However, and intel-based docker container images can be executed on Hex, althoug
 
 ## Why is it called 'Hex'?
 'Hex' is named after an elaborate, Rube Goldberg-esque, magic-powered computer housed at Unseen University in the city of Ankh-Morpork, in author Terry Pratchett's Discworld series.
-It consists of a very large number of esoteric components including (but not limited to) an entire any colony, large numbers of interconnected glass tubes, a mouse, and a stuffed teddy bear; the removal of any of which causes Hex to cease operating.
+It consists of a very large number of esoteric components including (but not limited to) an entire ant colony, large numbers of interconnected glass tubes, a mouse, and a stuffed teddy bear; the removal of any of which causes Hex to cease operating.
 
 > 'Of course, Hex doesn't actually think. Not as such. It just appears to be thinking.'
 >
@@ -27,16 +27,3 @@ It consists of a very large number of esoteric components including (but not lim
 > 'Ah. Really? Oh. Quite a large crowbar would be in order, then.'
 
 Excerpt from the works of Sir. Terry Pratchett
-
-## Compute Node Status
-
-<div class="status">
-{% for node, info in hosts %}
-    <!--<div class="node">
-        <span class="name">{{ node }}</span>
-        <img src={{ info.status_badge }} />
-    </div>-->
-{% endfor %}
-</div>
-
-<Button>Test</Button>

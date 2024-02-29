@@ -33,6 +33,3 @@ Unfortunately they have slower local storage, although larger overall capacity, 
 - ???GiB RAM
 - ???GiB SATA hard drive
 - 1Gbit Ethernet
-
-## Hardware Wishlist
-
