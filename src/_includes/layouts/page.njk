@@ -10,12 +10,16 @@
 
 	<div class="gap-8">
 		<article class="prose mx-auto">
-			<h1>{{ title }}</h1>
-
+			<h1 class="pt-5">{{ title }}</h1>
 			{{ content | safe }}
+			{% include "partials/pageflow.njk" %}
 		</article>
 	</div>
 
 	{% include "partials/footer.njk" %}
 </div>
 {% endblock %}
+
+{% for page in collections['managed-metal'] %}
+	{{ page }}
+{% endfor %}

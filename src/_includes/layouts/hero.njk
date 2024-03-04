@@ -3,7 +3,7 @@
 {% block content %}
 
 <header>
-    <div class="hero h-80 w-full" style="background-image: url(/assets/img/server_racks.jpg);">
+    <div class="hero h-96 w-full" style="background-image: url(/assets/img/server_racks.jpg);">
         <div class="hero-overlay bg-opacity-20"></div>
         <div class="hero-content text-center text-neutral-content">
             <div class="max-w-md">
@@ -24,8 +24,8 @@
     <article class="prose mx-auto">
         {{ content | safe }}
     </article>
-</div>
 
-{% include "partials/footer.njk" %}
+    {% include "partials/footer.njk" %}
+</div>
 
 {% endblock %}
