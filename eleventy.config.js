@@ -3,44 +3,26 @@ const path = require( 'path' );
 const postcss = require( 'postcss' );
 const tailwindcss = require( 'tailwindcss' );
 const autoprefixer = require( 'autoprefixer' );
-const cssnano = require( "cssnano" )
+const cssnano = require( "cssnano" );
 
 module.exports = function(eleventyConfig) {
 
-    // Plain file copies
+    // Plain File Copies
     eleventyConfig.addPassthroughCopy("src/**/*.jpg");
     eleventyConfig.addPassthroughCopy("src/**/*.png");
     eleventyConfig.addPassthroughCopy("src/**/*.svg");
 
-    // Simple Library Import Ops //
-    eleventyConfig.addShortcode("require", function(pkg) {
-        const infoPath = path.join('node_modules', pkg, 'package.json')
-        if( !fs.existsSync( infoPath ) ) {
-            console.warn( `[11ty] Unable to find requested package '${pkg}' - maybe try $> npm install -D ${pkg}` );
-            return "";
-        }
-        console.info( `[11ty] Importing '${pkg}' as a library...` );
-        const info = JSON.parse( fs.readFileSync(infoPath, { encoding: 'utf-8' }) );
-        
-        let fragment = [];
+    // Filters
+    require( './src/_11ty/filters/is_array.js' )( eleventyConfig );
 
-        for( file of info.files ) {
-            const src = path.join( 'node_modules', pkg, file );
-            const lib = path.join( eleventyConfig.dir.output, 'lib', pkg );
-            const dst = path.join( eleventyConfig.dir.output, 'lib', pkg, file );
-            const web = path.join( 'lib', pkg, file );
-            
-            fs.mkdirSync( lib, { recursive: true } );
-            fs.copyFileSync( src, dst );
+    // Shortcodes
+    require( './src/_11ty/shortcodes/gravatar.js' )( eleventyConfig );
+    require( './src/_11ty/shortcodes/require.js' )( eleventyConfig );
+    require( './src/_11ty/shortcodes/mermaid.js' )( eleventyConfig );
 
-            if( file.endsWith(".js") )
-                fragment.push( `<script type="text/javascript" src="/${web}"></script>` );
-            else if( file.endsWith(".css") )
-                fragment.push( `<link rel="stylesheet" href="/${web}">` );
-        }
-
-        return fragment.join('\n');
-    });
+    // Data Formats
+    require( './src/_11ty/data/bibtex.js' )( eleventyConfig );
+    require( './src/_11ty/data/yaml.js' )( eleventyConfig );
 
     // PostCSS transform + dumb reload mechanism
     eleventyConfig.on( 'eleventy.before', async ({ dir, runMode, outputMode }) => {

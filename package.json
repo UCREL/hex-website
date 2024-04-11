@@ -1,8 +1,10 @@
 {
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.17",
+    "bib2json": "^0.0.1",
     "cssnano": "^6.0.5",
     "daisyui": "^4.7.2",
     "npm-run-all": "^4.1.5",
@@ -14,8 +16,11 @@
     "start": "npm-run-all -p dev:*",
     "build": "run-s build:*",
     "dev:11ty": "eleventy --serve",
-    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --watch --postcss",
+    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o build/assets/css/tailwind.css --watch --postcss",
     "build:11ty": "eleventy",
-    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --postcss"
+    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o build/assets/css/tailwind.css --postcss"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
   }
 }

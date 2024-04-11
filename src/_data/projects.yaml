@@ -1,0 +1,90 @@
+- title: 'GPU accelerated Jupyter Notebooks'
+  image: /assets/img/blocks/gpu-med.jpg
+  year: 2024
+  description:
+    - A high-level research service based around (mostly) Python runtimes aimed to bring GPU compute support to researchers without discrete GPUs in their own workstations
+    - Part of longer-term experimentation with modern cluster technologies for research use.
+  author:
+    - Dr. John Vidler
+
+- title: 'The "Managed Metal" research service'
+  image: /assets/img/blocks/server-med.jpg
+  year: 2024
+  description:
+    - A low-level access service which allows researchers to execute code directly on the hosts that make up Hex.
+  author:
+    - Dr. John Vidler
+
+- title: 'LiSAScore - an incremental Improving of BERTScore'
+  image: /assets/img/blocks/gpu-med.jpg
+  year: 2024
+  description:
+    - A demonstration that Linear Sum assignment removes double-counting in semantic-based metrics
+    - Benchmarking translation and summarisation tasks against 6 common models including BERT, BART, Roberta, T5 and more.
+  author:
+    - Stephen Mander
+    - Jesse Phillips
+
+- title: "Metaphoric names identification in Chinese flower and plant names."
+  image: /assets/img/blocks/code-med.jpg
+  year: 2024
+  description:
+    - Token level classification task to identify metaphoric names in Chinese.
+    - We evaluate discriminative models like BERT, XLMR and generative models like GPT, Falcon and Lllama2.
+  author:
+    - Dr. Fei Zhu
+    - Damith Premasiri
+    - Tharindu Ranasinghe
+    - Prof. Ruslan Mitkov
+
+- title: Using Emotions to Help Detect Fake Reviews
+  image: /assets/img/blocks/gpu-med.jpg
+  year: 2024
+  description:
+    - A couple of experiments utilising large language models (LLMs) explore how incorporating emotion information can help to improve the performance metrics of detecting fake reviews.
+  author:
+    - Mansour Almansour
+
+- title: IAA-Oracle-ULTEC Project
+  image: /assets/img/blocks/code-med.jpg
+  year: 2024
+  description:
+    - The IAA-Oracle-ULTEC Project leverages advanced text processing tools to conduct in-depth linguistic analysis.
+    - The project efficiently manages and analyses large datasets using the TextProcessor class, which enables the precise extraction of linguistic features and the identification of geographically named entities through NLP models.
+    - Hosted on Hex, this setup ensures optimal performance and scalability, making it ideal for handling the extensive computational demands of text analysis tasks, especially those involving cleaned texts post-OCR processing, significantly reducing the time and effort needed to analyse such vast datasets.
+  author:
+    - Dr. Nouran Khallaf
+
+- title: Understanding imprecise space and time in narratives through qualitative representations, reasoning, and visualisation
+  image: /assets/img/blocks/text-med.jpg
+  year: 2024
+  description:
+    - With the Lancaster Uni SCC-UCREL Hex (in about 13hours), we processed 1000 Holocaust survivors' testimonies to extract spatial entities - toponyms (towns/cities, countries, continents), geographic feature nouns (ghettos, hills, and camps), events and times as well as sentiments  and emotions.
+  author:
+    - Dr. Ignatius Ezeani
+    - Prof. Ian Gregory
+    - Prof. Paul Rayson
+
+- title: Urban Genome - A study of medieval urban development
+  image: /assets/img/blocks/text-med.jpg
+  year: 2024
+  description:
+    - Using NLP and graph computation techniques to analyse the relationships between specific actors affecting sets of physical locations in sparse/minimal medieval collections.
+    - Hex's high core count and large working memory enable high-speed graph queries.
+  author:
+    - Dr. John Vidler
+    - Prof. Keith Lilley
+    - Prof. Ian Gregory
+    - Prof. Paul Rayson
+
+- title: "How do people with a diagnosis of bipolar talk about hypersexuality on Reddit: An exploratory analysis using Natural Language Processing methods."
+  image: /assets/img/blocks/text-med.jpg
+  year: 2024
+  description:
+    - We're using the Jupyter notebooks to run BERTopic models for exploratory analysis of my dataset and testing different transformer embeddings
+  author:
+    - Daisy Harvey
+    - Prof. Paul Rayson
+    - Prof. Steve Jones
+    - Dr. Jasper Palmier-Claus
+    - Fi Lobban

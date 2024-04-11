@@ -14,3 +14,27 @@
 h5 {
     font-weight: 600;
 }
+
+pre:has(> code.language-mermaid) {
+    background-color: transparent;
+}
+
+code.language-mermaid > .mermaid > svg{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-body > p {
+    flex-grow: 0;
+}
+
+.card-body > .justify-end {
+    text-align: right;
+}
+
+pre.nostyle {
+    background: none;
+    border: 1px solid lightgray;
+    color: inherit;
+    overflow-x: unset;
+}

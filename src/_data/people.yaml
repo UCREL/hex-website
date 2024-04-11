@@ -1,0 +1,21 @@
+- name: "Dr. John Vidler"
+  position:
+    - Project Lead
+    - Senior Research Associate
+  avatar: /assets/avatars/vidler.jpg
+
+- name: Prof. Paul Rayson
+  position:
+    - UCREL Director
+    - Professor in NLP
+  avatar: /assets/avatars/team-01.jpg
+
+- name: Dr. Mo El-Haj
+  position:
+    - UCREL Co-Director
+    - Senior Lecturer in NLP
+  avatar: /assets/avatars/mo_elhaj_z.jpg
+
+- name: Stephen Mander
+  position: ML techniques for NLP
+  avatar: /assets/avatars/mander.jpg
