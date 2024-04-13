@@ -1,0 +1,3 @@
+[submodule "src/_11ty"]
+	path = src/_11ty
+	url = https://github.com/JohnVidler/11ty-addons.git
