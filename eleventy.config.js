@@ -7,6 +7,9 @@ const cssnano = require( "cssnano" );
 
 module.exports = function(eleventyConfig) {
 
+    // Plugins :)
+    eleventyConfig.addPlugin( require("@11ty/eleventy-plugin-syntaxhighlight") );
+
     // Plain File Copies
     eleventyConfig.addPassthroughCopy("src/**/*.jpg");
     eleventyConfig.addPassthroughCopy("src/**/*.png");
@@ -19,6 +22,7 @@ module.exports = function(eleventyConfig) {
     require( './src/_11ty/shortcodes/gravatar.js' )( eleventyConfig );
     require( './src/_11ty/shortcodes/require.js' )( eleventyConfig );
     require( './src/_11ty/shortcodes/mermaid.js' )( eleventyConfig );
+    require( './src/_11ty/shortcodes/figures.js' )( eleventyConfig );
 
     // Data Formats
     require( './src/_11ty/data/bibtex.js' )( eleventyConfig );

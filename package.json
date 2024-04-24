@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.17",

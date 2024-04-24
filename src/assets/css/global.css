@@ -38,3 +38,8 @@ pre.nostyle {
     color: inherit;
     overflow-x: unset;
 }
+
+blockquote > p {
+    font-size: 150%;
+    line-height: 2rem;
+}
