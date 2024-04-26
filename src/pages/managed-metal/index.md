@@ -1,6 +1,9 @@
 ---
 layout: page.njk
-tags: managed-metal
+tags:
+    - managed-metal
+    - guide
+author: John Vidler
 title: The 'Managed Metal' Service
 next:
     url: /pages/managed-metal/connecting

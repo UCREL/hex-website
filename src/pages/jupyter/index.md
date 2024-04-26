@@ -1,6 +1,8 @@
 ---
 layout: page.njk
-tags: managed-metal
+tags:
+    - jupyter
+    - guide
 title: The 'Jupyter Notebook' Service
 ---
 

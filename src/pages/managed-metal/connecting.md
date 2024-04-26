@@ -1,7 +1,10 @@
 ---
 layout: page.njk
-tags: managed-metal
+tags:
+    - managed-metal
+    - guide
 title: Connecting to Hex over SSH
+author: John Vidler
 back:
     url: /pages/managed-metal
     text: Overview and Terms

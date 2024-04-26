@@ -1,6 +1,9 @@
 ---
 layout: page.njk
-tags: managed-metal
+tags:
+    - managed-metal
+    - guide
+author: John Vidler
 title: Using VSCode to connect to Hex
 back:
     url: /pages/managed-metal/connecting

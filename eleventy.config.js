@@ -28,6 +28,18 @@ module.exports = function(eleventyConfig) {
     require( './src/_11ty/data/bibtex.js' )( eleventyConfig );
     require( './src/_11ty/data/yaml.js' )( eleventyConfig );
 
+    // Manual ignores
+    eleventyConfig.ignores.add( "README.md" );
+    eleventyConfig.ignores.add( "_11ty" );
+
+    // Sorting order for Articles and Guides
+    function sortByTitle(a,b) {
+        return ('' + a.data.title).localeCompare(b.data.title);
+    }
+
+    eleventyConfig.addCollection( "article", (collectionApi) => collectionApi.getFilteredByTag("article").sort( sortByTitle ) );
+    eleventyConfig.addCollection( "guide", (collectionApi) => collectionApi.getFilteredByTag("guide").sort( sortByTitle ) );
+
     // PostCSS transform + dumb reload mechanism
     eleventyConfig.on( 'eleventy.before', async ({ dir, runMode, outputMode }) => {
         const cssRoot = path.join( dir.output, 'assets', 'css' );
