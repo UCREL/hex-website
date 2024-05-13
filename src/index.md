@@ -7,6 +7,10 @@ title: The UCREL-Hex Temporary Landing Page
 Hex is a collection of GPU equipped hosts onto which single- multi- or GPU-processor jobs can be executed.
 Currently 11 of these hosts are continuously available (220 CPU, 11 GPU and 352GiB of RAM) with plans to extend these up to 14 hosts with the inclusion of 3 dedicated GPU carrier hosts and again with a further 160 machines similar to the original 11 available for overnight runs on a <i>best effort</i> basis.
 
+## Service Status? Downtime? Connection Issues?
+
+See [this status page](https://status.ucrel-hex.scc.lancs.ac.uk) for all basic service status, and the Hex Teams channel for any maintenance announcements. If you continue to have issues contact j.vidler@lancaster.ac.uk or p.rayson@lancaster.ac.uk via email.
+
 ## How do I reference Hex in published works?
 If your work uses Hex, please use the following reference in your bibliography (in LaTeX/BibTex format):
 

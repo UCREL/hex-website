@@ -43,3 +43,10 @@ blockquote > p {
     font-size: 150%;
     line-height: 2rem;
 }
+
+img.inline {
+    display: inline-block;
+    max-height: 1lh;
+    padding: 0;
+    margin: 0;
+}

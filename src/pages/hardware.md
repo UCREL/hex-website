@@ -21,7 +21,6 @@ The 'core' of Hex is made up of 11 identical worker nodes; with each having the 
 
 Each node also has a 2.5Gbit network port but the switch we have available only supports 1GBit uplinks (for now!)
 
-
 ## The "Extended 3" Workers (to be merged into the cluster)
 
 These three additional boxes each include multiple RTX A5000 GPUs and will be included to better support multi-GPU workloads with larger datasets.
