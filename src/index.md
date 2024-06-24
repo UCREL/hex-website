@@ -9,6 +9,12 @@ Currently 11 of these hosts are continuously available (220 CPU, 11 GPU and 352G
 
 ## Service Status? Downtime? Connection Issues?
 
+Jupyter Notebooks: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_jupyter-notebooks/uptimes/7d/badge.svg" alt="7-day status badge for the Jupyter service" />, 
+Object and Block Storage: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_block-and-object-storage/uptimes/7d/badge.svg" alt="7-day status badge for the Block Storage service" />, 
+iSCSI Backend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_truenas-iscsi-storage/uptimes/7d/badge.svg" alt="7-day status badge for the iSCSI service" />, 
+Web Frontend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_traefik-frontend/uptimes/7d/badge.svg" alt="7-day status badge for the Web Frontend service" />, 
+Local DNS Service: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_scc-acme-dns-service/uptimes/7d/badge.svg" alt="7-day status badge for the DNS service" />
+
 See [this status page](https://status.ucrel-hex.scc.lancs.ac.uk) for all basic service status, and the Hex Teams channel for any maintenance announcements. If you continue to have issues contact j.vidler@lancaster.ac.uk or p.rayson@lancaster.ac.uk via email.
 
 ## How do I reference Hex in published works?

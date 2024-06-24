@@ -7,6 +7,12 @@ title: The 'Jupyter Notebook' Service
 author: John Vidler
 ---
 
+<div class="badge-row">
+    <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_jupyter-notebooks/uptimes/24h/badge.svg" />
+    <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_jupyter-notebooks/response-times/24h/badge.svg" />
+    <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_jupyter-notebooks/health/badge.svg" />
+</div>
+
 > JupyterLab is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design invites extensions to expand and enrich functionality.
 
 > The Jupyter Notebook is the original web application for creating and sharing computational documents. It offers a simple, streamlined, document-centric experience.
@@ -21,7 +27,7 @@ We're working on fixing this in a future release, but for the moment, if you hav
 I understand that no storage backend is currently configured for this service, so **when an instance is stopped or restarted all data will be lost**.
 It is the user's responsibility to ensure a suitable backup strategy is used to prevent unexpected data loss, and it is understood that this service is supplied with no guarantee, implied or otherwise.
 
-<form action="/hub" method="get" class="w-full place-content-center grid">
+<form action="https://hub.ucrel-hex.scc.lancs.ac.uk/" method="get" class="w-full place-content-center grid">
     <button class="btn btn-neutral">
         I understand, take to me to the notebooks!
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
