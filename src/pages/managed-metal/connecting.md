@@ -19,7 +19,7 @@ You can generate a new SSH key on your local machine by following the steps outl
 
 1. Open Terminal on Linux or Mac (or Git Bash console for Windows)
 
-2. Paste the text below, replacing the email used in the example with your GitHub email address.
+2. Paste the text below, replacing the email used in the example with your Lancaster University email address.
 
    `ssh-keygen -t ed25519 -C "your_email@example.com"`
 
