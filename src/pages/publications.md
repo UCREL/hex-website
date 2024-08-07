@@ -24,12 +24,13 @@ If your work uses Hex, please use the following reference in your bibliography (
 <h2>Existing Publications</h2>
 
 {% if publications | length %}
-{% for record in publications %}
-<div class="backdrop-blur-sm rounded-md p-5">
-<h3>{{ record.Fields.title }}</h3>
-<span>{{ record.Fields.author }}</span>
-<p>{{ record.Fields.abstract }}</p>
-<p>{{ record.Fields.howpublished | safe }}</p>
+{% for record in publications.byYear %}
+<div class="">
+    <a href={{ record.Fields.url | safe }}><h2 class="card-title">{{ record.Fields.title }}</h2></a>
+    {% if record.Fields.abstract %}
+        <p class="italic w-5/6 ml-auto mr-auto">{{ record.Fields.abstract }}</p>
+    {% endif %}
+    <span>{{ record.Fields.author }}, {{ record.Fields.year }}</span>
 </div>
 {% endfor %}
 {% else %}

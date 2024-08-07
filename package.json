@@ -16,7 +16,7 @@
   "scripts": {
     "start": "npm-run-all -p dev:*",
     "build": "run-s build:*",
-    "dev:11ty": "eleventy --serve",
+    "dev:11ty": "eleventy --serve --port=8081",
     "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o build/assets/css/tailwind.css --watch --postcss",
     "build:11ty": "eleventy",
     "build:css": "tailwindcss -i src/assets/css/tailwind.css -o build/assets/css/tailwind.css --postcss"
