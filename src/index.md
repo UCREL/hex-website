@@ -5,7 +5,7 @@ title: The UCREL-Hex Temporary Landing Page
 
 ## What is 'Hex'?
 Hex is a collection of GPU equipped hosts onto which single- multi- or GPU-processor jobs can be executed.
-Currently 11 of these hosts are continuously available (220 CPU, 11 GPU and 352GiB of RAM) with plans to extend these up to 14 hosts with the inclusion of 3 dedicated GPU carrier hosts and again with a further 160 machines similar to the original 11 available for overnight runs on a <i>best effort</i> basis.
+The current, exact specification of all nodes can be found [on the hardware page](/pages/hardware) and we are actively looking to expand our capabilities overe time to align better with larger HPC systems.
 
 Hex _is not HEC_ - it is not yet another high-performance system, but is rather an modular development system, which attempts to reach feature parity with larger systems to allow students, researchers and staff to design software to run on [HEC](https://lancaster-hec.readthedocs.io/en/latest/index.html), [BEDE](https://n8cir.org.uk/bede/), [AWS](https://aws.amazon.com/), [Google Compute](https://cloud.google.com/products/compute?hl=en), and other systems, but in a much more development-friendly environment.
 
