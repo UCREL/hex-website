@@ -4,6 +4,9 @@ title: Accessing the HEC
 author: Henry Oldroyd
 tags:
     - article
+next:
+    url: /pages/articles/running-on-HEC
+    text: Running code on HEC
 ---
 
 
