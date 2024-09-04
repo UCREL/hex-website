@@ -6,7 +6,6 @@ tags:
     - article
 ---
 
-# Running a job on the HEC
 So you've successfully run a jupyter notebook on the HEX. 
 Now you've debugged it you may want to run in on the more powerful HEC. Here is a Guide for how to submit it as a batch job.
 This guide was based on this [HEC page](https://lancaster-hec.readthedocs.io/en/latest/submit.html)
@@ -121,3 +120,5 @@ wayland-2022%
 ```
 
 The .err file is empty as there were no errors in the job. The .out file shows the jobs output which are as expected
+
+(add details about how to execute a notebook with tools like https://github.com/jupyter/nbconvert)

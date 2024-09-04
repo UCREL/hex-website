@@ -1,6 +1,6 @@
 ---
 layout: article.njk
-title: Accessing the HEC
+title: How to get access to the HEC. 
 author: Henry Oldroyd
 tags:
     - article
@@ -13,15 +13,13 @@ next:
 
 (initial skelton draft for article. Still being worked on)
 
-# How to get access to the HEC. 
-
 ## How to get a HEC account:
 
 To get access to the HEC you should have a look over these pages:
 - <https://lancaster-hec.readthedocs.io/en/latest/getaccount.html>
 - <https://portal.lancaster.ac.uk/ask/hec>
 
-Then fill in this [form](https://helpcentre.lancaster.ac.uk/plugins/servlet/desk/portal/4/create/338)
+This [form](https://helpcentre.lancaster.ac.uk/plugins/servlet/desk/portal/4/create/338) should then be filled in. If you are a researched then the Principle investigator or Lead researcher should complete it. If you are a degree student then your supervisor should complete it.  
 
 This should lead to the ISS sending you a username and password
 
