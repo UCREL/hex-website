@@ -23,7 +23,7 @@ If your work uses Hex, please use the following reference in your bibliography (
 
 <h2>Existing Publications</h2>
 
-{% if publications | length %}
+{% if publications.byYear | length %}
 {% for record in publications.byYear %}
 <div class="">
     <a href={{ record.Fields.url | safe }}><h2 class="card-title">{{ record.Fields.title }}</h2></a>
