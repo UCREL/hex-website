@@ -58,4 +58,19 @@ ghlogin -A bdlan09
 
 Step 4:
 Run the job with srun
+This seems like it should be a simple but I have been having repeated issues with the submitted job not running
 
+```
+[henryoldroyd@login2.bede ~]$ ghlogin -A bdlan09
+srun: job 839128 queued and waiting for resources
+srun: job 839128 has been allocated resources
+[henryoldroyd@gh001.bede ~]$ ls
+hello.py  job.com
+[henryoldroyd@gh001.bede ~]$ srun job.com
+srun: Job 839128 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 839128 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 839128 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 839128 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 839128 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 839128 step creation still disabled, retrying (Requested nodes are busy)
+```
