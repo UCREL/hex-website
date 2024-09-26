@@ -3,7 +3,7 @@ layout: article.njk
 title: Running a Job on the HEC
 author: Henry Oldroyd
 tags:
-    - article
+    - guide
 back:
     url: /pages/articles/accessing-the-HEC
     text: How to get access to the HEC

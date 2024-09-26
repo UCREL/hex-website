@@ -3,7 +3,7 @@ layout: article.njk
 title: Getting BEDE Access. 
 author: Henry Oldroyd
 tags:
-    - article
+    - guide
 ---
 
 (add details to step 1)

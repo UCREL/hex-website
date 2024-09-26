@@ -3,7 +3,7 @@ layout: article.njk
 title: Running a job on BEDE
 author: Henry Oldroyd
 tags:
-    - article
+    - guide
 ---
 
 Step 1: Login to BEDE by SSH
