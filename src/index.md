@@ -5,14 +5,18 @@ title: The UCREL-Hex Temporary Landing Page
 
 ## What is 'Hex'?
 Hex is a collection of GPU equipped hosts onto which single- multi- or GPU-processor jobs can be executed.
-Currently 11 of these hosts are continuously available (220 CPU, 11 GPU and 352GiB of RAM) with plans to extend these up to 14 hosts with the inclusion of 3 dedicated GPU carrier hosts and again with a further 160 machines similar to the original 11 available for overnight runs on a <i>best effort</i> basis.
+The current, exact specification of all nodes can be found [on the hardware page](/pages/hardware) and we are actively looking to expand our capabilities overe time to align better with larger HPC systems.
+
+Hex _is not HEC_ - it is not yet another high-performance system, but is rather an modular development system, which attempts to reach feature parity with larger systems to allow students, researchers and staff to design software to run on [HEC](https://lancaster-hec.readthedocs.io/en/latest/index.html), [BEDE](https://n8cir.org.uk/bede/), [AWS](https://aws.amazon.com/), [Google Compute](https://cloud.google.com/products/compute?hl=en), and other systems, but in a much more development-friendly environment.
+
+Note that Hex is not directly affiliated with any of these systems (although Hex and HEC are both located at Lancaster University) and simply attempts to reach feature parity wherever it can with these; where budget and practicality allow.
 
 ## Service Status? Downtime? Connection Issues?
 
-Jupyter Notebooks: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_jupyter-notebooks/uptimes/7d/badge.svg" alt="7-day status badge for the Jupyter service" />, 
-Object and Block Storage: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_block-and-object-storage/uptimes/7d/badge.svg" alt="7-day status badge for the Block Storage service" />, 
-iSCSI Backend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_truenas-iscsi-storage/uptimes/7d/badge.svg" alt="7-day status badge for the iSCSI service" />, 
-Web Frontend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_traefik-frontend/uptimes/7d/badge.svg" alt="7-day status badge for the Web Frontend service" />, 
+Jupyter Notebooks: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_jupyter-notebooks/uptimes/7d/badge.svg" alt="7-day status badge for the Jupyter service" /><br />
+Object and Block Storage: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_block-and-object-storage/uptimes/7d/badge.svg" alt="7-day status badge for the Block Storage service" /><br />
+iSCSI Backend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_truenas-iscsi-storage/uptimes/7d/badge.svg" alt="7-day status badge for the iSCSI service" /><br />
+Web Frontend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_traefik-frontend/uptimes/7d/badge.svg" alt="7-day status badge for the Web Frontend service" /><br />
 Local DNS Service: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_scc-acme-dns-service/uptimes/7d/badge.svg" alt="7-day status badge for the DNS service" />
 
 See [this status page](https://status.ucrel-hex.scc.lancs.ac.uk) for all basic service status, and the Hex Teams channel for any maintenance announcements. If you continue to have issues contact j.vidler@lancaster.ac.uk or p.rayson@lancaster.ac.uk via email.

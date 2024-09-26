@@ -18,13 +18,13 @@ author: John Vidler
 > The Jupyter Notebook is the original web application for creating and sharing computational documents. It offers a simple, streamlined, document-centric experience.
 
 Primarily this service caters to **Data Scientists** who wish to use **Python-based** or **R-based** environments to process their data.
-Each instance is launched on one of Hex's worker nodes and can use up to 20 CPU cores, and approximately 32GB of RAM; however currently this service has no long-term storage backend, so uses ephemeral storage for short-term data retention. While this can store quite a large amount of data, it will be lost when an instance is restarted or shut down.
+Each instance is launched on one of Hex's worker nodes and can use up to 20 CPU cores, and approximately 32GB of RAM. The storage for notebooks is handled by a centralised VM `ucrel-hex-nas` which provides synchronised storage between instances. It is however somewhat limited in its current configuration, and we are looking to upgrade this to a colocated storage server in the future.
 
-We're working on fixing this in a future release, but for the moment, if you have specific requirements or concerns, please contact us via the links below.
+If you have specific requirements or concerns, please contact us via the links below.
 
 ## User Declaration
 
-I understand that no storage backend is currently configured for this service, so **when an instance is stopped or restarted all data will be lost**.
+I understand that **this is a BETA service**, and while persistent storage between instances is now provided, no backups are currently available so **users are responsible for their own data retention**.
 It is the user's responsibility to ensure a suitable backup strategy is used to prevent unexpected data loss, and it is understood that this service is supplied with no guarantee, implied or otherwise.
 
 <form action="https://hub.ucrel-hex.scc.lancs.ac.uk/" method="get" class="w-full place-content-center grid">

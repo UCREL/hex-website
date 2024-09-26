@@ -24,7 +24,7 @@ title: UCREL-Hex History
     <div class="timeline-end mb-10">
       <time class="font-mono italic">January 2023</time>
       <div class="text-lg font-black">First 'Core' Nodes Purchased</div>
-      The first core 11 nodes are provisioned, linked into the swarm and installed into the server room at Infolab21.
+      The first core 11 nodes are provisioned, linked into the cluster and installed into the server room at Infolab21.
       <img class="rounded-lg" src="/assets/img/hex-phase-1.jpg" alt="11 Hex nodes in their rack cabinet">
     </div>
     <hr />
@@ -35,9 +35,9 @@ title: UCREL-Hex History
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
     </div>
     <div class="timeline-start md:text-end mb-10">
-      <time class="font-mono italic">Soon?</time>
+      <time class="font-mono italic">July 2024</time>
       <div class="text-lg font-black">The 'Extended 3' Nodes</div>
-      Stephen Mander transfers control of his triple-GPU hardware over to the Hex swarm.
+      Three new 64 Core Intel Xeon Silver 4216 CPU @ 2.10GHz servers are linked into the cluster, each equipped with three NVIDIA RTX A5000 24GiB GPUs and represents a significant boost in performance for Hex.
     </div>
     <hr/>
   </li>
