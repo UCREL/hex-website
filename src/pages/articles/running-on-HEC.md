@@ -4,9 +4,12 @@ title: Running a Job on the HEC
 author: Henry Oldroyd
 tags:
     - article
+back:
+    url: /pages/articles/accessing-the-HEC
+    text: How to get access to the HEC
 ---
 
-So you've successfully run a jupyter notebook on the HEX. 
+So you've successfully run a Jupyter notebook on the HEX. 
 Now you've debugged it you may want to run in on the more powerful HEC. Here is a Guide for how to submit it as a batch job.
 This guide was based on this [HEC page](https://lancaster-hec.readthedocs.io/en/latest/submit.html)
 
