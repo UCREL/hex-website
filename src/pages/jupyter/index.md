@@ -27,6 +27,12 @@ If you have specific requirements or concerns, please contact us via the links b
 I understand that **this is a BETA service**, and while persistent storage between instances is now provided, no backups are currently available so **users are responsible for their own data retention**.
 It is the user's responsibility to ensure a suitable backup strategy is used to prevent unexpected data loss, and it is understood that this service is supplied with no guarantee, implied or otherwise.
 
+<form action="/pages/undergraduate-terms-of-use" method="get" class="w-full place-content-center grid">
+    <button class="btn btn-outline border-red-600 border-2">ADDITIONAL TERMS FOR UNDERGRADUATE STUDENTS</button>
+</form>
+
+<br />
+
 <form action="https://hub.ucrel-hex.scc.lancs.ac.uk/" method="get" class="w-full place-content-center grid">
     <button class="btn btn-neutral">
         I understand, take to me to the notebooks!

@@ -37,3 +37,9 @@ with the following statements:
 
 + Admin users (Dr John Vidler and SCC-Systems users) may inspect data held in
   your home folder, and logs if we suspect anything untoward.
+
+<form action="/pages/undergraduate-terms-of-use" method="get" class="w-full place-content-center grid">
+    <button class="btn btn-outline border-red-600 border-2">ADDITIONAL TERMS FOR UNDERGRADUATE STUDENTS</button>
+</form>
+
+<br />
