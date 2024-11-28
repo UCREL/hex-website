@@ -14,7 +14,6 @@ Note that Hex is not directly affiliated with any of these systems (although Hex
 ## Service Status? Downtime? Connection Issues?
 
 Jupyter Notebooks: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_jupyter-notebooks/uptimes/7d/badge.svg" alt="7-day status badge for the Jupyter service" /><br />
-Object and Block Storage: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_block-and-object-storage/uptimes/7d/badge.svg" alt="7-day status badge for the Block Storage service" /><br />
 iSCSI Backend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_truenas-iscsi-storage/uptimes/7d/badge.svg" alt="7-day status badge for the iSCSI service" /><br />
 Web Frontend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_traefik-frontend/uptimes/7d/badge.svg" alt="7-day status badge for the Web Frontend service" /><br />
 Local DNS Service: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_scc-acme-dns-service/uptimes/7d/badge.svg" alt="7-day status badge for the DNS service" />
@@ -62,5 +61,5 @@ It consists of a very large number of esoteric components including (but not lim
 
 Excerpt from the works of Sir. Terry Pratchett
 
-<img loading="lazy" class="h-fit" src="/assets/img/Hex-by-Dall-E.png" alt="A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett" />
+<img loading="lazy" class="w-fit" src="/assets/img/Hex-by-Dall-E.png" alt="A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett" />
 <div class="text-center h-fit">A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett</div>

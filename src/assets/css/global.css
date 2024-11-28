@@ -2,6 +2,10 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
+html {
+    scroll-padding-top: 5rem;
+}
+
 .prose {
     max-width: 90ch;
 }

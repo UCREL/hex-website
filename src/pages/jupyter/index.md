@@ -22,6 +22,8 @@ Each instance is launched on one of Hex's worker nodes and can use up to 20 CPU 
 
 If you have specific requirements or concerns, please contact us via the links below.
 
+If you require GPU accelerated notebooks, please contact us for access to the Managed Metal service. Although do please make sure your notebooks work on a CPU instance first before attempting them on the limited GPU resources.
+
 ## User Declaration
 
 I understand that **this is a BETA service**, and while persistent storage between instances is now provided, no backups are currently available so **users are responsible for their own data retention**.

@@ -11,7 +11,16 @@
 			<h2>Guides</h2>
 			<ul>
 			{% for post in collections.guide %}
-				<li><a class="italic" href="{{ post.url }}">{{ post.data.title }}</a> by {{ post.data.author }}</li>
+				<li>
+					<a class="italic font-bold" href="{{ post.url }}">{{ post.data.title }}</a> by {{ post.data.author }}
+					<div class="p-0 m-0 text-sm">
+						{% for tag in post.data.tags | sort %}
+							{% if tag != "guide" %}
+								<span class="font-mono mr-3 p-1 pl-2 pr-2 bg-slate-400 font-bold text-white">{{ tag }}</span>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</li>
 			{% endfor %}
 			</ul>
 

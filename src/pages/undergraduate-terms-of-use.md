@@ -1,7 +1,5 @@
 ---
 layout: page.njk
-tags:
-    - guide
 author: John Vidler
 title: Terms for Undergraduate Students
 ---

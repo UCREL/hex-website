@@ -1,43 +1,61 @@
 {
-    "ucrel-hex": {
-        "group": "Management VMs",
-        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-015/health/badge.svg",
-        "net": "10GB/s Fiber"
+    "Management VMs": {
+        "ucrel-hex": {
+            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-015/health/badge.svg",
+            "net": "10GB/s Fiber"
+        },
+
+        "ucrel-hex-nas": {
+            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_block-and-object-storage/health/badge.svg",
+            "disk": "1TiB VNVMe ZRAID",
+            "net": "10GB/s Fiber"
+        }
     },
 
-    "ucrel-hex-nas": {
-        "group": "Management VMs",
-        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_block-and-object-storage/health/badge.svg",
-        "disk": "1TiB VNVMe ZRAID",
-        "net": "10GB/s Fiber"
+    "The 'Core 11'": {
+        "hex-host-001 - hex-host-011": {
+            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-001/health/badge.svg",
+            "cpu": "20 core 12th Gen Intel Core i7-12700",
+            "gpu": "1x RTX A2000 12GB",
+            "ram": "32GB",
+            "disk": "512 GiB NVMe",
+            "net": "1 GB/s Ethernet",
+            "services": [
+                "jupyter",
+                "docker",
+                "ssh"
+            ]
+        }
     },
 
-    "hex-host-001 - hex-host-011": {
-        "group": "Core 11",
-        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-001/health/badge.svg",
-        "cpu": "20 core 12th Gen Intel Core i7-12700",
-        "gpu": "1x RTX A2000 12GB",
-        "ram": "32GB",
-        "disk": "512 GiB NVMe",
-        "net": "1 GBit Ethernet",
-        "services": [
-            "jupyter",
-            "docker",
-            "ssh"
-        ]
+    "HP Sponsored Hardware": {
+        "hex-host-012": {
+            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-012/health/badge.svg",
+            "cpu": "80 Core Intel Xeon 6240 @ 2.59Ghz",
+            "gpu": "2x RTX A5000 24GB",
+            "ram": "384GB",
+            "disk": "2x 1TiB NVMe + 2x 4TiB HDD",
+            "net": "10 GB/s Ethernet",
+            "services": [
+                "docker",
+                "ssh",
+                "vps"
+            ]
+        }
     },
 
-    "hex-host-013 - hex-host-015": {
-        "group": "Extended 3",
-        "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-013/health/badge.svg",
-        "cpu": "64 Core Intel Xeon Silver 4216 CPU @ 2.10GHz",
-        "gpu": "RTX A5000 24GB",
-        "ram": "128GB",
-        "disk": "512 GiB NVMe + 1 TiB NVMe",
-        "net": "1 GBit Ethernet",
-        "services": [
-            "docker",
-            "ssh"
-        ]
+    "The 'Extended 3'": {
+        "hex-host-013 - hex-host-015": {
+            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-013/health/badge.svg",
+            "cpu": "64 Core Intel Xeon Silver 4216 CPU @ 2.10GHz",
+            "gpu": "RTX A5000 24GB",
+            "ram": "128GB",
+            "disk": "512 GiB NVMe + 1 TiB NVMe",
+            "net": "1 GB/s Ethernet",
+            "services": [
+                "docker",
+                "ssh"
+            ]
+        }
     }
-} 
+}

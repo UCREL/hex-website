@@ -8,6 +8,9 @@ title: Using VSCode to connect to Hex
 back:
     url: /pages/managed-metal/connecting
     text: Connecting over SSH
+next:
+    url: /pages/managed-metal/basic-linux-tools
+    text: Basic Linux Tools - Terminal Commands
 ---
 
 <div role="alert" class="alert">

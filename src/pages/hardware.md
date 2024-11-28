@@ -6,8 +6,11 @@ author: John Vidler
 
 A (nearly) complete list of the equipment that currently (August 2024) makes up Hex.
 
-<div class="sm:columns-3 columns-1">{% for host, info in hosts %}
-    <div class="not-prose flex flex-col p-3 m-3 break-inside-avoid" style="border: 1px dashed #000">
+<div class="not-prose">{% for groupName, group in hosts %}
+<div>
+<h3 class="font-extrabold">{{ groupName }}</h3>
+{% for host, info in group %}
+    <div class="flex flex-col p-3 m-3 break-inside-avoid" style="border: 1px dashed #000">
         <span class="font-extrabold">{{ host }}</span>
         <div class="not-prose flex flex-col align-middle gap-1 text-sm">
             {% if info.cpu %}
@@ -58,6 +61,7 @@ A (nearly) complete list of the equipment that currently (August 2024) makes up 
             {% endif %}
         </div>
     </div>
+{% endfor %}</div>
 {% endfor %}</div>
 
 ## Further Information

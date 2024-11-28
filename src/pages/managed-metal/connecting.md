@@ -63,6 +63,10 @@ Once this is in place, you should be able to connect to your assigned Node(s) by
 where `???` is your assigned node number. This should automatically drop you into a bash terminal session.
 
 
+### Unmanaged or Personal Machines
+If you are not on a university-managed laptop or desktop, or are using your own equipment, you can also connect to the
+university VPN service by installing the software found here: [Lancaster University - Portal - Virtual Private Network (VPN)](https://portal.lancaster.ac.uk/ask/vpn/)
+
 
 ## Connections through the SCC Bastion Server
 
