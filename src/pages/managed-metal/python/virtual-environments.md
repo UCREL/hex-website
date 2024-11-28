@@ -10,7 +10,7 @@ back:
     url: /pages/managed-metal/basic-linux-tools
     text: Basic Linux Tools - Terminal Commands
 next:
-    url: /pages/managed-metal/python/python-gpu-notebooks
+    url: /pages/managed-metal/python/gpu-notebooks
     text: GPU Accelerated Jupyter Notebooks
 ---
 
