@@ -8,6 +8,7 @@ tags:
 
 (add details to step 1)
 ## Step 1: Contact the Lancaster Uni Research Software Engineer for BEDE
+Stephen Mander - s.mander3@lancaster.ac.uk
 Sam Bland 
 
 ## Step 2: Find emails related to SAFE website login:
