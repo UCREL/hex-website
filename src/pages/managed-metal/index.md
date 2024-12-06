@@ -10,13 +10,18 @@ next:
     text: Connecting over SSH
 ---
 
-This service is handled on a per-request basis, and to gain access you should contact either
-<a href="mailto:j.vidler@lancaster.ac.uk">Dr John Vidler</a> or <a href="mailto:p.rayson@lancaster.ac.uk">Prof. Paul Rayson</a>.
+This service is handled on a per-request basis, and to request access please use [The Hex Sign-Up Form](https://forms.office.com/e/qhzG7ZSWTd).
 Individual cases will be considered and access granted for cases where low-level access to specific hardware configurations
 is needed.
 
 You will have direct access to a single specific compute node with user-level access (non-root) but access to launch docker
 runtimes to support custom software configurations.
+
+<form action="https://forms.office.com/e/qhzG7ZSWTd" method="get" class="w-full place-content-center grid">
+    <button class="btn btn-outline border-red-600 border-2">The Hex Sign-Up Form</button>
+</form>
+
+<br />
 
 # Service Notice
 
