@@ -1,7 +1,7 @@
 {
     "Management VMs": {
         "ucrel-hex": {
-            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-015/health/badge.svg",
+            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_traefik-frontend/uptimes/1h/badge.svg",
             "net": "10GB/s Fiber"
         },
 
@@ -24,13 +24,25 @@
                 "jupyter",
                 "docker",
                 "ssh"
-            ]
+            ],
+            "badges": {
+                "hex-host-001": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-001/uptimes/1h/badge.svg",
+                "hex-host-002": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-002/uptimes/1h/badge.svg",
+                "hex-host-003": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-003/uptimes/1h/badge.svg",
+                "hex-host-004": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-004/uptimes/1h/badge.svg",
+                "hex-host-005": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-005/uptimes/1h/badge.svg",
+                "hex-host-006": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-006/uptimes/1h/badge.svg",
+                "hex-host-007": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-007/uptimes/1h/badge.svg",
+                "hex-host-008": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-008/uptimes/1h/badge.svg",
+                "hex-host-009": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-009/uptimes/1h/badge.svg",
+                "hex-host-010": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-010/uptimes/1h/badge.svg",
+                "hex-host-011": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-011/uptimes/1h/badge.svg"
+            }
         }
     },
 
     "HP Sponsored Hardware": {
         "hex-host-012": {
-            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-012/health/badge.svg",
             "cpu": "80 Core Intel Xeon 6240 @ 2.59Ghz",
             "gpu": "2x RTX A5000 24GB",
             "ram": "384GB",
@@ -46,7 +58,6 @@
 
     "The 'Extended 3'": {
         "hex-host-013 - hex-host-015": {
-            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-013/health/badge.svg",
             "cpu": "64 Core Intel Xeon Silver 4216 CPU @ 2.10GHz",
             "gpu": "RTX A5000 24GB",
             "ram": "128GB",
@@ -55,7 +66,12 @@
             "services": [
                 "docker",
                 "ssh"
-            ]
+            ],
+            "badges": {
+                "hex-host-013": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-013/uptimes/1h/badge.svg",
+                "hex-host-014": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-014/uptimes/1h/badge.svg",
+                "hex-host-015": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/compute-nodes_hex-host-015/uptimes/1h/badge.svg"
+            }
         }
     }
 }

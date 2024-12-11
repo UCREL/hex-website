@@ -59,6 +59,19 @@ A (nearly) complete list of the equipment that currently (August 2024) makes up 
                 {% endfor %}
             </div>
             {% endif %}
+            {% if info.badges|length %}
+            <span class="font-bold">Status:</span>
+            <div class="columns-4 align-middle gap-1 ml-2.5">
+                {% for host, badge in info.badges %}
+                    <div class="w-fit text-lg">{{ host }}:<img src={{ badge }} alt="Status badge for {{ host }}" class="h-[1em] inline-block pl-3" /></div>
+                {% endfor %}
+            </div>
+            {% elif info.status_badge %}
+            <span class="font-bold">Status:</span>
+            <div class="gap-1 ml-2.5">
+                <div class="w-fit text-lg">{{ host }}:<img src={{ info.status_badge }} alt="Status badge for {{ host }}" class="h-[1em] inline-block pl-3" /></div>
+            </div>
+            {% endif %}
         </div>
     </div>
 {% endfor %}</div>
