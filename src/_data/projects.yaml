@@ -88,3 +88,21 @@
     - Prof. Steve Jones
     - Dr. Jasper Palmier-Claus
     - Fi Lobban
+
+- title: "Translating Akkadian Cuneiform into English"
+  year: 2024
+  description:
+    - Fine-tuning Large Language Models to translate Cuneiform (old clay tablet text) into English.
+    - A model is trained on a large Corpus in order to translate Akkadian, a long extinct language, into English for use in Assyriology.
+  author:
+    - Daniel Jones
+    - Dr. Mo El-Haj
+
+- title: "Measuring the Effect of Availability Attacks on Dynamic Obstacle Location Data for Reinforcement Learning Agents in 2D Grid World Environments"
+  year: 2024
+  description:
+    - In a 2D grid world environment, reinforcement learning (RL) agents are trained to navigate toward a goal while avoiding obstacles that move randomly within the environment. However, if an attacker introduces delays in the obstacle location data provided to the agent, it could disrupt the agent's ability to make timely and accurate decisions.
+    - This research investigates how such availability attacks affect the agent’s performance and success rate in reaching its goal. The study provides an understanding of the impact of availability attacks in this scenario, contributing to the development of more robust RL systems.
+  author:
+    - Ryan Hyland
+    - Professor Daniel Prince
