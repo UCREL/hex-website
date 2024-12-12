@@ -6,7 +6,6 @@
         },
 
         "ucrel-hex-nas": {
-            "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_block-and-object-storage/health/badge.svg",
             "disk": "1TiB VNVMe ZRAID",
             "net": "10GB/s Fiber"
         }

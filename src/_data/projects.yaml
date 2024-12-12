@@ -106,3 +106,12 @@
   author:
     - Ryan Hyland
     - Professor Daniel Prince
+
+- title: "Investigating How Users Adapt Their Language Across Different Online Social Groups"
+  year: 2024
+  description:
+    - The proposed project aims to investigate how online users adapt their language across different online communities, focusing on the extent of language mirroring within these environments.
+    - Building off research on language mirroring in face-to-face interactions, this project will use Natural Language Processing (NLP) techniques to analyse language patterns in data collected from Reddit.
+  author:
+    - George Bland
+    - Dr. Alistair Baron
