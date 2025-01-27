@@ -12,7 +12,7 @@ See also our <a href="/pages/publications">Publications</a> page for related wor
 <div class="h-5">&nbsp;</div>
 <div class="w-full xl:max-w-screen-xl ml-auto mr-auto">
   <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-    {% for project in projects %}<div class="card w-96 bg-base-100 shadow-xl image-full mb-5">
+    {% for project in projects | sort(attribute='year') | reverse %}<div class="card w-96 bg-base-100 shadow-xl image-full mb-5">
       <figure><img src="{{ project.image }}" /></figure>
       <div class="card-body">
         <h2 class="card-title">{{ project.title }}</h2>

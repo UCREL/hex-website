@@ -90,6 +90,7 @@
     - Fi Lobban
 
 - title: "Translating Akkadian Cuneiform into English"
+  image: /assets/img/blocks/text-med.jpg
   year: 2024
   description:
     - Fine-tuning Large Language Models to translate Cuneiform (old clay tablet text) into English.
@@ -99,6 +100,7 @@
     - Dr. Mo El-Haj
 
 - title: "Measuring the Effect of Availability Attacks on Dynamic Obstacle Location Data for Reinforcement Learning Agents in 2D Grid World Environments"
+  image: /assets/img/blocks/gpu-med.jpg
   year: 2024
   description:
     - In a 2D grid world environment, reinforcement learning (RL) agents are trained to navigate toward a goal while avoiding obstacles that move randomly within the environment. However, if an attacker introduces delays in the obstacle location data provided to the agent, it could disrupt the agent's ability to make timely and accurate decisions.
@@ -108,6 +110,7 @@
     - Professor Daniel Prince
 
 - title: "Investigating How Users Adapt Their Language Across Different Online Social Groups"
+  image: /assets/img/blocks/server-med.jpg
   year: 2024
   description:
     - The proposed project aims to investigate how online users adapt their language across different online communities, focusing on the extent of language mirroring within these environments.
@@ -117,9 +120,86 @@
     - Dr. Alistair Baron
 
 - title: NLP Odyssey
+  image: /assets/img/blocks/text-med.jpg
   year: 2024
   description:
     - This NLP application helps with Memory-Augmentation for Individuals dealing with Young-Onset Dementia.
   author:
     - Yash Bhatia
     - Dr. Mo El-Haj
+
+- title: Spatial Narratives
+  image: /assets/img/blocks/text-med.jpg
+  year: 2025
+  description:
+    - Extracting and analysing spatial narratives from textual data
+  author:
+    - Ignatius Ezeani
+    - Prof. Paul Rayson
+
+- title: Wmatrix Annotation Parallelisation (qpym2)
+  image: /assets/img/blocks/gpu-med.jpg
+  year: 2025
+  description:
+    - Large scale parallelisation of corpus annotation pipelines
+  author:
+    - Prof. Paul Rayson
+
+- title: Applications of LLMs for UK court procedures
+  image: /assets/img/blocks/gpu-med.jpg
+  year: 2024
+  description:
+    - Legal NLP has been studied over decades and the recent advancements of the LLMs have pushed the possibilities of practical applications of Legal NLP to greater heights.
+    - We study how these LLMs can help lawyers, judges and general public in multiple legal tasks such as Legal judgment prediction, Prior case retrieval and Citation network analysis.
+  author:
+    - Damith Dola Mullage
+    - Prof Ruslan Mitkov
+
+- title: Various NLP projects
+  image: /assets/img/blocks/server-med.jpg
+  year: 2024
+  description:
+    - NLP projects, including processing large diachronic datasets, looking at language change over time.
+  author:
+    - Dr. Alistair Baron
+
+- title: LM Applications
+  image: /assets/img/blocks/gpu-med.jpg
+  year: 2024
+  description:
+    - This project focuses on developing language model (LM)-based applications for natural language processing (NLP) tasks, mainly aiming at the models' learning, multilingual and explainable capabilities.
+  author:
+    - Dr. Hansi Hettiarachchi
+
+- title: Transformer-Assisted LLM Source Code Summarisation
+  image: /assets/img/blocks/code-med.jpg
+  year: 2024
+  description:
+    - Neural Source Code Summarisation (NSCS) aims to generate natural language summaries of source code to improve developer and maintainer understanding of code.
+    - Many solutions to this problem use small transformer models, designed to be run locally on a workstation. Transformer-generated summaries often score well across many NLG metrics but fail to consistently produce clear and understandable natural language.
+    - Conversely, Large Language Model (LLM)s’ ability to generate clear and understandable natural language presents an exciting solution to this problem, especially with the increased availability of LLMs and the increase in capability of workstation hardware over recent years meaning that some LLMs can be run from developers' workstations.
+    - However, LLM summaries of code often differ greatly from developer-written summaries, and frequently miss key words and phrases resulting in low scores across NLG metrics.
+    - We show how combining these two methods by using transformer-generated summaries in prompt engineering may enable LLMs to create better source code summaries.
+  author:
+    - Jesse Phillips
+    - Prof. Tracy Hall
+    - Dr. Mo El-Haj
+
+- title: Sinhala Encoder-only Language Models
+  image: /assets/img/blocks/text-med.jpg
+  year: 2024
+  description:
+    - The recent developments of language models (LMs) have shown significant advancements in the field of natural language processing (NLP) as they have produced state-of-the-art results in many NLP tasks, outperforming previous machine learning models such as LSTMs.
+    - However, their effectiveness is largely dependent on having access to language resources for model pre-training.
+    - This project aims to build LMs for Sinhala; a low-resource language. 
+  author:
+    - Dr. Tharindu Ranasinghe
+
+- title: Detecting Fake News in The Era of LLMs
+  image: /assets/img/blocks/gpu-med.jpg
+  year: 2025
+  description:
+    - This project investigates the ability of SOTA models to differentiate between real news, human-generated fake news, and LLM-generated fake news.
+  author:
+    - Irfan Sabri
+    - Dr. Hansi Hettiarachchi
