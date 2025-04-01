@@ -1,34 +1,50 @@
-<li><a href="/">Home</a></li>
-<li>
-    <details>
-        <summary>Managed Metal <div class="badge badge-warning">Beta</div></summary>
-        <ul class="bg-base-200 rounded-none" style="width: max-content; padding-left: 1rem;">
+<ul>
+    <li><a class="btn btn-ghost text-xl" href="/">UCREL-Hex</a></li>
+    <li>
+        <a href="https://forms.office.com/e/qhzG7ZSWTd" class="btn btn-sm btn-outline">Request access to Hex</a>
+    </li>
+    <li><a href="/pages/publications">Publications</a></li>
+    <li><a href="/pages/projects">Project Catalog</a></li>
+    <li>
+        <summary><a href="/pages/slurm">Slurm Batch <div class="badge badge-warning">Beta</div></a></summary>
+        <ul>
+            <li><a href="/pages/slurm">Overview and Terms</a></li>
+        </ul>
+    </li>
+    <li>
+        <summary><a href="/pages/managed-metal">Managed Metal</a></summary>
+        <ul>
             <summary class="font-bold">Managed Metal Basics</summary>
             <li><a href="/pages/managed-metal">Overview and Terms</a></li>
             <li><a href="/pages/managed-metal/connecting">Connecting over SSH</a></li>
             <li><a href="/pages/managed-metal/using-vscode">Connecting with VSCode</a></li>
             <li><a href="/pages/managed-metal/basic-linux-tools">Basic Linux Tools - Terminal Commands</a></li>
-            
+        </ul>
+        <ul>
             <summary class="font-bold mt-3">Python on Managed Metal</summary>
             <li><a href="/pages/managed-metal/python/virtual-environments">Virtual Environments</a></li>
             <li><a href="/pages/managed-metal/python/gpu-notebooks">Python GPU Notebooks</a></li>
             
         </ul>
-    </details>
-</li>
-<li><a href="/pages/jupyter">Jupyter Notebooks <div class="badge badge-error">Alpha</div></a></li>
-<li><a href="/pages/articles">Articles and Guides</a></li>
-<li><a href="/pages/publications">Publications</a></li>
-<li>
-    <details>
-        <summary>About Hex</summary>
-        <ul class="bg-base-200 rounded-none">
-            <li><a href="/pages/projects">Project Catalog</a></li>
-            <li><a href="/pages/hardware">Hardware Information</a></li>
-            <li><a href="/pages/history">History</a></li>
+    </li>
+    <li><a href="/pages/jupyter">Jupyter Notebooks <div class="badge badge-error">Alpha</div></a></li>
+    <li>
+        <a href="/pages/articles">Articles and Guides</a>
+
+        <ul>
+            <summary class="font-bold mt-3">Articles</summary>
+            {% for post in collections.article %}
+                <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+            {% endfor %}
         </ul>
-    </details>
-</li>
-<li class="text-right">
-    <a href="https://forms.office.com/e/qhzG7ZSWTd" class="btn btn-sm btn-outline">Request access to Hex</a>
-</li>
+
+        <ul>
+            <summary class="font-bold mt-3">Guides</summary>
+            {% for post in collections.guide %}
+                <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    <li><a href="/pages/hardware">Hardware Information</a></li>
+    <li><a href="/pages/history">Hex's History</a></li>
+</ul>

@@ -1,20 +1,17 @@
 {% extends "./base.njk" %}
 
 {% block content %}
-
 <header>
     <div class="hero h-96 w-full" style="background-image: url(/assets/img/server_racks.jpg);">
         <div class="hero-overlay bg-opacity-20"></div>
         <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-md">
-                <h1 class="mb-5 text-5xl font-bold">UCREL Hex</h1>
-                <p class="mb-5">A shared, hybrid multiprocessor system</p>
+            <div class="max-w-lg">
+                <h1 class="mb-5 text-5xl font-bold text-white">UCREL Hex - Phase 3</h1>
+                <p class="mb-5 text-white">A shared, hybrid multiprocessor system</p>
             </div>
         </div>
     </div>
 </header>
-
-{% include "partials/navbar.njk" %}
 
 <div class="container mx-auto">
     <div class="p-5">
@@ -24,8 +21,5 @@
     <article class="prose mx-auto">
         {{ content | safe }}
     </article>
-
-    {% include "partials/footer.njk" %}
 </div>
-
 {% endblock %}

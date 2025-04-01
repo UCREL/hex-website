@@ -12,8 +12,19 @@
 		<title>{{ title }}</title>
 	</head>
 	<body class="min-h-screen">
-        {% block content %}
-        {% endblock %}
+		<div class="flex flex-row">
+			<div class="flex-grow-0">
+				{% block navigation %}
+					{% include "partials/navigation.njk" %}
+				{% endblock %}
+			</div>
+			<div class="flex-grow dark:bg-darkblue">
+        		{% block content %}{% endblock %}
+				{% block footer %}
+					{% include "partials/footer.njk" %}
+				{% endblock %}
+			</div>
+		</div>
 		{% mermaid_js %}
     </body>
 </html>
