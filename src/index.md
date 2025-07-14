@@ -1,6 +1,6 @@
 ---
-layout: hero.njk
-title: The UCREL-Hex Temporary Landing Page
+layout: page.njk
+title: The UCREL-Hex Landing Page
 ---
 
 ## What is 'Hex'?
@@ -61,5 +61,5 @@ It consists of a very large number of esoteric components including (but not lim
 
 Excerpt from the works of Sir. Terry Pratchett
 
-<img loading="lazy" class="w-fit" src="/assets/img/Hex-by-Dall-E.png" alt="A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett" />
+<img loading="lazy" class="w-1/2" src="/assets/img/Hex-by-Dall-E.png" alt="A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett" />
 <div class="text-center h-fit">A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett</div>

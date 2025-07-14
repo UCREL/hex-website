@@ -2,7 +2,6 @@
 layout: page.njk
 tags:
     - slurm
-    - guide
 author: John Vidler
 title: The 'Slurm' Batch Service
 next:

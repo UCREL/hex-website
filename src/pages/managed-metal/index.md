@@ -2,13 +2,17 @@
 layout: page.njk
 tags:
     - managed-metal
-    - guide
 author: John Vidler
 title: The 'Managed Metal' Service
 next:
     url: /pages/managed-metal/connecting
     text: Connecting over SSH
 ---
+
+<div role="alert" class="alert alert-warning mt-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+  <span>Hex is currently undergoing a phased upgrade, and is not currently accepting new users for the 'Managed Metal' service. Existing users are recommended to migrate to the Slurm service for most workloads.</span>
+</div>
 
 This service is handled on a per-request basis, and to request access please use [The Hex Sign-Up Form](https://forms.office.com/e/qhzG7ZSWTd).
 Individual cases will be considered and access granted for cases where low-level access to specific hardware configurations

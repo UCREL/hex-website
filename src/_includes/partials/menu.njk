@@ -1,18 +1,30 @@
 <ul>
-    <li><a class="btn btn-ghost text-xl" href="/">UCREL-Hex</a></li>
+    <li>
+        <button class="btn btn-sm btn-outline w-full" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS">Toggle Theme</button>
+    </li>
     <li>
         <a href="https://forms.office.com/e/qhzG7ZSWTd" class="btn btn-sm btn-outline">Request access to Hex</a>
     </li>
+
+    <li><a class="text-xl" href="/">Home</a></li>
+    
+    <hr />
     <li><a href="/pages/publications">Publications</a></li>
+
+    <hr />
     <li><a href="/pages/projects">Project Catalog</a></li>
+
+    <hr />
     <li>
         <summary><a href="/pages/slurm">Slurm Batch <div class="badge badge-warning">Beta</div></a></summary>
         <ul>
             <li><a href="/pages/slurm">Overview and Terms</a></li>
         </ul>
     </li>
+
+    <hr />
     <li>
-        <summary><a href="/pages/managed-metal">Managed Metal</a></summary>
+        <summary><a href="/pages/managed-metal">Managed Metal <div class="badge badge-warning">Beta</div></a></summary>
         <ul>
             <summary class="font-bold">Managed Metal Basics</summary>
             <li><a href="/pages/managed-metal">Overview and Terms</a></li>
@@ -27,7 +39,11 @@
             
         </ul>
     </li>
+
+    <hr />
     <li><a href="/pages/jupyter">Jupyter Notebooks <div class="badge badge-error">Alpha</div></a></li>
+
+    <hr />
     <li>
         <a href="/pages/articles">Articles and Guides</a>
 
@@ -45,6 +61,32 @@
             {% endfor %}
         </ul>
     </li>
+    <hr />
     <li><a href="/pages/hardware">Hardware Information</a></li>
+
+    <hr />
     <li><a href="/pages/history">Hex's History</a></li>
+
+    <hr />
+    <li>
+        <summary>Other Resources</summary>
+        <ul>
+            <summary class="font-bold mt-3">Contacts</summary>
+            <li><a href="mailto:j.vidler@lancaster.ac.uk">Dr. John Vidler</a></li>
+            <li><a href="mailto:p.rayson@lancaster.ac.uk">Prof. Paul Rayson</a></li>
+        </ul>
+        <ul>
+            <summary class="font-bold mt-3">Related Sites</summary>
+            <li><a href="https://ucrel.lancs.ac.uk/">UCREL Group Homepage</a></li>
+            <li><a href="https://www.lancaster.ac.uk/scc/">School of Computing and Communcations</a></li>
+            <li><a href="https://www.lancaster.ac.uk/">Lancaster University</a></li>
+        </ul>
+        <ul>
+            <summary class="font-bold mt-3">Miscellaneous</summary>
+            <li><a href="https://status.ucrel-hex.scc.lancs.ac.uk">Service Status</a></li>
+            <li><a href="https://ucrel-hex.scc.lancs.ac.uk/grafana">Logs and Metrics</a></li>
+            <li><a href="https://ucrel-hex.scc.lancs.ac.uk/grafana/public-dashboards/dd93a972f97b43b79fe2122cd4737294">Live Energy Usage</a></li>
+        </ul>
+    </li>
+
 </ul>

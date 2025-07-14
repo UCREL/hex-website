@@ -5,14 +5,12 @@ module.exports = {
       "./dist/*.{html,js}",
       "./dist/**/*.{html,md,js}"
     ],
-    theme: {
-      extend: {},
-    },
     plugins: [
-        require('daisyui'),
-        require('@tailwindcss/typography')
+      require('daisyui'),
+      require('@tailwindcss/typography')
     ],
     daisyui: {
-        themes: [ "acid", "dim" ]
-    }
+      themes: ["light", "dark"], // "light" must be present
+    },
+    darkMode: "class"
   }

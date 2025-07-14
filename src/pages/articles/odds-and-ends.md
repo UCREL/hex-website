@@ -17,3 +17,4 @@ If you have any other small resources that you think would be valuable to add, p
 | A script for plotting comparative histograms in Python. Only tangentially related, but a script that people keep borrowing off me – so there might be something to it | [Github Gist](https://gist.github.com/JamesPhillipsUK/a4a981e70ba822da616c18e1934c5bfc) | Jesse Phillips |
 | Part 1 of my beginners course in Docker and Docker Compose | [Docker 101](https://johnvidler.co.uk/blog/docker-101/) | John Vidler |
 | Part 2 of my beginners course in Docker and Docker Compose | [Docker 102](https://johnvidler.co.uk/blog/docker-102/) | John Vidler |
+| Lancaster University RSE Pages | [Lancaster RSE](https://www.lancaster.ac.uk/rse/) | Lancaster University, various |

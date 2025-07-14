@@ -2,7 +2,6 @@
 layout: page.njk
 tags:
     - jupyter
-    - guide
 title: The 'Jupyter Notebook' Service
 author: John Vidler
 ---

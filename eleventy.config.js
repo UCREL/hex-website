@@ -43,11 +43,16 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection( "article", (collectionApi) => collectionApi.getFilteredByTag("article").filter(page => !Boolean(page.data.draft)).sort( sortByTitle ) );
     eleventyConfig.addCollection( "guide", (collectionApi) => collectionApi.getFilteredByTag("guide").filter(page => !Boolean(page.data.draft)).sort( sortByTitle ) );
     
+    // Tailwind and PostCSS watch hooks:
+    eleventyConfig.addWatchTarget("./src/assets/css/tailwind.css");
+    eleventyConfig.addWatchTarget("./tailwind.config.js");
+    eleventyConfig.addWatchTarget("./postcss.config.js");
+
     // PostCSS transform + dumb reload mechanism
     eleventyConfig.on( 'eleventy.before', async ({ dir, runMode, outputMode }) => {
         const cssRoot = path.join( dir.output, 'assets', 'css' );
         if( fs.existsSync(cssRoot) )
-            fs.rmdirSync( cssRoot, { recursive: true, force: true } );
+            fs.rmSync( cssRoot, { recursive: true, force: true } );
     } );
     
     eleventyConfig.addTemplateFormats("css");

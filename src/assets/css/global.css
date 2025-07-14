@@ -20,6 +20,13 @@ body {
     @apply dark:border-gray-200;
     @apply max-w-7xl;
     @apply mx-auto;
+    @apply p-10;
+    @apply border-t-2 border-red-500
+}
+
+.footer > h5 {
+    @apply text-2xl;
+    @apply dark:text-gray-200;
 }
 
 .prose {
@@ -61,8 +68,15 @@ pre {
     @apply dark:text-white;
 }
 
-kbd {
-    @apply dark:text-black !important;
+.kbd {
+    @apply text-white;
+}
+
+.card {
+    @apply shadow-md;
+    @apply shadow-cyan-500/50;
+    @apply ring;
+    @apply text-white;
 }
 
 .card-body > p {
@@ -98,23 +112,12 @@ ul > li > ul {
     line-height: 1.0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    @apply text-slate-900;
-    @apply dark:text-slate-200;
-}
-
 .btn {
-    @apply bg-slate-200;
-    @apply dark:bg-slate-700;
-    @apply text-slate-900;
-    @apply dark:text-slate-200;
     @apply border-slate-300;
     @apply dark:border-slate-500;
-    @apply hover:no-underline !important;
 }
 
 a {
-    @apply text-slate-900;
     @apply dark:text-slate-200;
 }
 
