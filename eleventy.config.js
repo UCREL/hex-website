@@ -43,13 +43,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection( "article", (collectionApi) => collectionApi.getFilteredByTag("article").filter(page => !Boolean(page.data.draft)).sort( sortByTitle ) );
     eleventyConfig.addCollection( "guide", (collectionApi) => collectionApi.getFilteredByTag("guide").filter(page => !Boolean(page.data.draft)).sort( sortByTitle ) );
     
-    // PostCSS transform + dumb reload mechanism
-    eleventyConfig.on( 'eleventy.before', async ({ dir, runMode, outputMode }) => {
-        const cssRoot = path.join( dir.output, 'assets', 'css' );
-        if( fs.existsSync(cssRoot) )
-            fs.rmdirSync( cssRoot, { recursive: true, force: true } );
-    } );
-    
     eleventyConfig.addTemplateFormats("css");
     eleventyConfig.addExtension("css", {
         outputFileExtension: "css",
