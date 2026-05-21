@@ -30,8 +30,8 @@ with the following statements:
 
 + This is a SHARED SERVICE so other users may be present on the node at any
   time, and you should check if the node is in use before attempting to launch
-  large-scale services (via `who`, `docker ps` and `htop` minimally, to get
-  other users and workloads present)
+  large-scale services (via `squeue`, `sinfo` minimally, to get other users
+  and workloads present)
 
 + Network traffic and system logs are collected and stored, and you are
   responsible for any/all data that is loaded onto Hex, but data within your

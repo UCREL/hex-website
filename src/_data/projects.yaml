@@ -1,205 +1,416 @@
-- title: 'GPU accelerated Jupyter Notebooks'
-  image: /assets/img/blocks/gpu-med.jpg
-  year: 2024
-  description:
-    - A high-level research service based around (mostly) Python runtimes aimed to bring GPU compute support to researchers without discrete GPUs in their own workstations
-    - Part of longer-term experimentation with modern cluster technologies for research use.
-  author:
-    - Dr. John Vidler
+'2024':
+  - title: Detecting LLM Generated Text in Product Reviews
+    description: >-
+      The project will involve creating a dataset of human-written and
+      LLM-generated product reviews. This dataset will be used to train text
+      classification algorithms to determine whether a product review is written
+      by a human or by an LLM.
+  - title: >-
+      Measuring the Effect of Availability Attacks on Dynamic Obstacle Location
+      Data for Reinforcement Learning Agents in 2D Grid World Environments
+    description: >-
+      In a 2D grid world environment, reinforcement learning (RL) agents are
+      trained to navigate toward a goal while avoiding obstacles that move
+      randomly within the environment. However, if an attacker introduces delays
+      in the obstacle location data provided to the agent, it could disrupt the
+      agent's ability to make timely and accurate decisions. This research
+      investigates how such availability attacks affect the agent’s performance
+      and success rate in reaching its goal. The study provides an understanding
+      of the impact of availability attacks in this scenario, contributing to
+      the development of more robust RL systems.
+  - title: >-
+      Investigating How Users Adapt Their Language Across Different Online
+      Social Groups
+    description: >-
+      The proposed project aims to investigate how online users adapt their
+      language across different online communities, focusing on the extent of
+      language mirroring within these environments. Building off research on
+      language mirroring in face-to-face interactions, this project will use
+      Natural Language Processing (NLP) techniques to analyse language patterns
+      in data collected from Reddit.
+  - title: Automatic essay scoring
+    description: >-
+      The project aims to provide a new methodology to evaluate automatic essay
+      scoring systems. It also seeks to build a state-of-art language model to
+      score Arabic essays.
+  - title: NLP Odyssey
+    description: >-
+      This NLP application helps with Memory-Augmentation for Individuals
+      dealing with Young-Onset Dementia.
+  - title: 3rd year project(NLP odessy)
+    description: >-
+      The project aims to explore the potential of Natural Language Processing
+      (NLP) to assist users in summarizing key points from virtual meetings
+      during work hours and lectures. The primary goal is to support individuals
+      with memory impairment while also offering students effective tools to
+      study lecture material.
+'2025':
+  - title: Spatial Narratives
+    description: Extracting and analysing spatial narratives from textual data
+  - title: Wmatrix annotation parallelisation (qpym2)
+    description: Large scale parallelisation of corpus annotation pipelines
+  - title: Applications of LLMs for UK court procedures
+    description: >-
+      Legal NLP has been studied over decades and the recent advancements of the
+      LLMs have pushed the possibilities of practical applications of Legal NLP
+      to greater heights. We study how these LLMs can help lawyers, judges and
+      general public in multiple legal tasks such as Legal judgment prediction,
+      Prior case retrieval and Citation network analysis.
+  - title: Various NLP projects
+    description: >-
+      NLP projects, including processing large diachronic datasets, looking at
+      language change over time.
+  - title: LM Applications
+    description: >-
+      This project focuses on developing language model (LM)-based applications
+      for natural language processing (NLP) tasks, mainly aiming at the models'
+      learning, multilingual and explainable capabilities. 
+  - title: Transformer-Assisted LLM Source Code Summarisation
+    description: >-
+      Neural Source Code Summarisation (NSCS) aims to generate natural language
+      summaries of source code to improve developer and maintainer understanding
+      of code. Many solutions to this problem use small transformer models,
+      designed to be run locally on a workstation. Transformer-generated
+      summaries often score well across many NLG metrics but fail to
+      consistently produce clear and understandable natural language. 
+      Conversely, Large Language Model (LLM)s’ ability to generate clear and
+      understandable natural language presents an exciting solution to this
+      problem, especially with the increased availability of LLMs and the
+      increase in capability of workstation hardware over recent years meaning
+      that some LLMs can be run from developers' workstations.  However, LLM
+      summaries of code often differ greatly from developer-written summaries,
+      and frequently miss key words and phrases resulting in low scores across
+      NLG metrics.
 
-- title: 'The "Managed Metal" research service'
-  image: /assets/img/blocks/server-med.jpg
-  year: 2024
-  description:
-    - A low-level access service which allows researchers to execute code directly on the hosts that make up Hex.
-  author:
-    - Dr. John Vidler
+      We show how combining these two methods by using transformer-generated
+      summaries in prompt engineering may enable LLMs to create better source
+      code summaries.
+  - title: Sinhala Encoder-only Language Models
+    description: >-
+      The recent developments of language models (LMs) have shown significant
+      advancements in the field of natural language processing (NLP)  as they
+      have produced state-of-the-art results in many NLP tasks, outperforming
+      previous machine learning models such as LSTMs. However, their
+      effectiveness is largely dependent on having access to language resources
+      for model pre-training. This project aims to build LMs for Sinhala; a
+      low-resource language. 
+  - title: Detecting Fake News in The Era of LLMs
+    description: >-
+      This project investigates the ability of SOTA models to differentiate
+      between real news, human-generated fake news, and LLM-generated fake news.
+  - title: Automatic Image Captioning in News Media Articles
+    description: >-
+      Image captioning serves the fundamental goal of creating a descriptive
+      caption for an image. It
 
-- title: 'LiSAScore - an incremental Improving of BERTScore'
-  image: /assets/img/blocks/gpu-med.jpg
-  year: 2024
-  description:
-    - A demonstration that Linear Sum assignment removes double-counting in semantic-based metrics
-    - Benchmarking translation and summarisation tasks against 6 common models including BERT, BART, Roberta, T5 and more.
-  author:
-    - Stephen Mander
-    - Jesse Phillips
+      involves recognising the objects within the image, any actions taking
+      place, their connections,
 
-- title: "Metaphoric names identification in Chinese flower and plant names."
-  image: /assets/img/blocks/code-med.jpg
-  year: 2024
-  description:
-    - Token level classification task to identify metaphoric names in Chinese.
-    - We evaluate discriminative models like BERT, XLMR and generative models like GPT, Falcon and Lllama2.
-  author:
-    - Dr. Fei Zhu
-    - Damith Premasiri
-    - Tharindu Ranasinghe
-    - Prof. Ruslan Mitkov
+      and even subtle details that might not be immediately visible. Once these
+      elements are identified,
 
-- title: Using Emotions to Help Detect Fake Reviews
-  image: /assets/img/blocks/gpu-med.jpg
-  year: 2024
-  description:
-    - A couple of experiments utilising large language models (LLMs) explore how incorporating emotion information can help to improve the performance metrics of detecting fake reviews.
-  author:
-    - Mansour Almansour
+      the task shifts to crafting a concise and pertinent description that
+      accurately captures the essence
 
-- title: IAA-Oracle-ULTEC Project
-  image: /assets/img/blocks/code-med.jpg
-  year: 2024
-  description:
-    - The IAA-Oracle-ULTEC Project leverages advanced text processing tools to conduct in-depth linguistic analysis.
-    - The project efficiently manages and analyses large datasets using the TextProcessor class, which enables the precise extraction of linguistic features and the identification of geographically named entities through NLP models.
-    - Hosted on Hex, this setup ensures optimal performance and scalability, making it ideal for handling the extensive computational demands of text analysis tasks, especially those involving cleaned texts post-OCR processing, significantly reducing the time and effort needed to analyse such vast datasets.
-  author:
-    - Dr. Nouran Khallaf
+      of the image in terms of syntax and meaning.
+  - title: >-
+      Advancing Sentiment Analysis through Deep Learning Techniques and Language
+      Learning Models
+    description: >-
+      Building DL and LLMs for Sentiment Analysis of Arabic Dialects in
+      Hospitality.
+  - title: >-
+      Machine Translation in the AI Era: Comparing previous methods of machine
+      translation with large language models
+    description: >-
+      Research paper comparing multiple different methods of machine translation
+      and comparing their efficacy, will be comparing rules based, statistical,
+      neural and large language model translation. 
+  - title: >-
+      Working Title -- "Cyberbullying on the internet: Comparative study of NLP
+      methods and the role of context".
+    description: >-
+      Comparing the efficacy of rule-based, deep learning, and large language
+      models in determining whether online content is indicative of
+      cyberbullying across five datasets, two languages, with and without
+      additional numerical context. 
+  - title: Detecting Fake News in The Era of LLMs
+    description: >-
+      This project evaluates the effectiveness of the state-of-the-art (SOTA)
+      detection models in identifying LLM-generated fake news, comparing their
+      accuracy to that of detecting human-generated fake news and real news.
+  - title: Spanish Legal NLP
+    description: >-
+      With this project we want to assess the capability of state-of-the-art
+      LLMs to understand actual cases judged by the Spanish Supreme Court. Our
+      main goals are the prediction of the judges decisions and the assessment
+      of the reasoning provided by said LLMs.
+  - title: Cross Lingual Summarisation
+    description: >-
+      A Lancaster VinUni collaboration on cross lingual fact-checked
+      summarisation
+  - title: >-
+      A Comparative Study of Vision Transformers and Multimodal Language Models
+      for Violence Detection in Videos
+    description: >-
+      This project compares two artificial intelligence models for detecting
+      violence in videos: TimeSformer, a vision-based model, and LLaMA 3.2
+      Vision, a multimodal model that combines image and language understanding.
+      It uses public datasets to identify the most effective approach for
+      real-world safety applications.
+  - title: Computational Modelling of Energy Materials
+    description: >-
+      The project applies first-principles methods, primarily density functional
+      theory (DFT), to model energy materials such as metal halide perovskites.
+      It focuses on predicting structural, electronic, and defect properties to
+      understand and optimize their performance in photovoltaics and
+      optoelectronics. The goal is to accelerate the design of stable,
+      high-efficiency materials for next-generation energy technologies through
+      atomistic simulations.
+  - title: Multilingual Machine Learning Model for PyMUSAS
+    description: >-
+      To create a multilingual machine learning based model that can generate
+      USAS tags, which will then be incorporated into PyMUSAS.
+  - title: Davy Notebooks Project
+    description: Identify text reuse across Davys Notebooks.
+  - title: N8CIR historical spelling internship
+    description: >-
+      Using hex to run the moses smt system to perform character based smt for
+      normalising the spelling of historical text. Also may want to use it for
+      distributed training and testing of other normalisation methods in python.
+  - title: GPU Geophysical Inversion for Resistivity Surverys
+    description: >-
+      Accelerating the inversion of large resistivity datasets using
+      parallelisation, GPU offload and surrogate modelling. This will then lead
+      to integration with coupled groundwater models, with application to
+      geohazards (i.e. landslides).
+  - title: Enhanced accuracy and efficiency in LLMs through Knowledge Distillation
+    description: >-
+      This project will evaluates different methods of Knowledge Distillation to
+      enhance the factual accuracy and deployment efficiency of Large Language
+      Models.
+  - title: >-
+      Lindenmayer Graphs: An Approach to Rapidly Generate Structured Random
+      Graphs
+    description: >-
+      Network science relies on synthetic data, this project looks at using a
+      type of exponentially parallelizing deterministic context free rewrite
+      system and their application to rapidly generate random graphs with
+      formally guaranteed substructures.
+  - title: Detecting LLM generated reviews using ML
+    description: >-
+      My project is going to explore methods in detecting LLM generated reviews,
+      particularly on amazon, using Machine Learning. My current approach will
+      be combining three unique ML models into a ensemble for more accurate
+      classification.
+  - title: >-
+      Analysis of Populist Metaphors for Immigration in Spanish Parliamentary
+      Discourse
+    description: >-
+      This project will develop a computational pipeline for detecting and
+      analysing metaphors in Spanish Parliamentary discourse. A RoBERTa
+      transformer will be fine-tuned using both the VU Metaphor corpus and a
+      manually annotated section from the corpus
+  - title: LLM Generated Summaries in Different Forms – Can We Detect Them?
+    description: >-
+      I am refining a pre trained llama model to study how well an ai detector i
+      make  that focuses on short summaries and multiple languages can perform.
+  - title: FlickType (SCC.402 Group Project)
+    description: >-
+      New implementation for VR typing, moving keyboard to improve the VR typing
+      experience and efficiency has a predictive element requiring AI model
+  - title: N8CIR Internship - Student attendance data
+    description: >-
+      Cleaning student attendance data (across iLancaster attendance, Moodle and
+      Panopto) and tracking engagement across the 3 sites and investigating what
+      an "engaged" student looks like and how well they perform. 
+  - title: >-
+      Efficient Numerical Integration Schemes for Stochastic Differential
+      Equations
+    description: >-
+      This project explores numerical integration schemes for stochastic
+      differential equations (SDEs) with a particular focus on discretization of
+      ergodic SDEs and applications in Markov Chain Monte Carlo sampling.
+  - title: >-
+      Using Bayesian inference to constrain jet models for a large sample of GRB
+      afterglows
+    description: >-
+      We use Bayesian inference to condition computational models on
+      observations of GRB afterglows to recover the underlying physical
+      parameters.
+'2026':
+  - title: >-
+      Evaluation of Cultural Values Represented By Large Language Models in
+      Language Variations
+    description: >-
+      The proposed project will aim to create a benchmark to evaluate large
+      language models’ (LLMs’) representation of the values of various cultures
+      when prompted in languages other than English or the culture’s own
+      language. This will involve creation of a persona-based prompt dataset,
+      which will then be translated into multiple languages and then fed into
+      various LLMs. The output received from the LLMs will be used to evaluate
+      if the LLMs can accurately represent the cultural values (as defined by
+      the Hofstede Culture Model and wave 7 of the World Values Survey) of the
+      cultures queried about.
+  - title: >-
+      Exploring the Ability of AI Chatbots to Offer Empathetic and Supportive
+      Interactions in Mental Health Contexts
+    description: >-
+      The project will aim to investigate AI chatbots and their ability to
+      provide meaningful emotional support to help relieve stress and combat any
+      other mental health issues that an individual may be facing.
+  - title: >-
+      An Explainable Approach to AI-Generated Text Detection for Product Review
+      Moderation
+    description: >-
+      I will be building a text classifier to detect whether a product review is
+      AI generated or human written along with a plain English explanation for
+      the model’s outcome. This will be used by moderation teams to triage
+      faster and make better decisions.
+  - title: >-
+      Multi-layering LLM for multi-task Integration in Offensive
+      text-moderation.
+    description: >-
+      To investigate problems within why a base decoder LLM struggle with hate
+      speech detection and enable a method to mitigate the effects of the
+      problem. To improve the results of the base decoder LLM by giving it
+      additional information through layering other LLM to perform task on
+      classification of the input text. Results includes reasoning and
+      statistical scores such as F1 and accuracy. Analysis of the AI's reason
+      output and how useful it is within the real world though suggestion to
+      moderators of users of a platform.
+  - title: Multi-layering LLM for multi-task Integration in Offensive text-moderation
+    description: >-
+      The project proposes to uses many layers of LLM that each is set to
+      classify a piece of text to be inputted within the prompt along with the
+      input text to enable to decoder LLM to understand the context of the
+      message better and generate a reason for the offensiveness classification
+      that matches it. Classifying text on topic, emotion, irony and target can
+      help the final offensive classifier to be more accurate and the reasoning
+      to be more trustworthy and understanding
+  - title: 'AI Enhanced Bid Writing: A Multi-Agent Approach to Tender Automation'
+    description: >-
+      This project develops an AI Enhanced Bid Writing system designed to
+      automate responses for complex defense tenders. This project encompaces
+      work for SCC.419 and BAE Systems (FalconWorks).
+  - title: A Vision – Language Approach to Automated Mammogram Grading
+    description: >-
+      I am making a vision language model to predict the BIRADs score, density
+      percentage and density classification of breasts from mammogram images.
+  - title: A Vision – Language Approach to Automated Mammogram Grading
+    description: >-
+      I am developing a vision language model to predict the BIRADs score,
+      density percentage and density class of breast images from mammograms. 
+  - title: A Vision – Language Approach to Automated Mammogram Grading
+    description: >-
+      I am developing a vision language model to predict the BIRADs, density
+      percentage and density classification of breast mammogram images.
+  - title: 'CIdiomBench: A Benchmark for Evaluating LLMs on Chinese Idioms'
+    description: >-
+      This study aims to develop an evaluation framework to assess whether large
+      language models can accurately comprehend the extended meanings of Chinese
+      idioms. Through Three tasks, i evaluate whether large language models
+      demonstrate a solid understanding of Chinese idioms.
+  - title: Context Privacy
+    description: >-
+      This project will develop techniques to limit the information adversaries
+      can obtain from cyber-physical systems.
+  - title: >-
+      Mitigating geohazards through coupled multiphysics modelling and
+      uncertainty analysis
+    description: >-
+      This project aims to improve our ability to predict moisture induced
+      landslides and embankment failures by improved inversion of Electrical
+      Resistivity Tomography. We will start by investigating surrogate models
+      and ensemble methods to quantify uncertainty in ERT data, before
+      propagating this uncertainty into coupled hydrogeophysical models. 
+  - title: >-
+      Amazon Intelligence: A Scalable Big Data Pipeline for Analytics and
+      Recommendation Systems
+    description: >-
+      This project architectures a robust, distributed pipeline to ingest and
+      analyze the massive Amazon Reviews 2023 dataset, utilizing advanced
+      database indexing and vector similarity to map complex consumer-product
+      relationships at scale. By deploying scalable machine learning models for
+      clustering and personalized recommendations, the system demonstrates how
+      to transform millions of raw data points into high-fidelity business
+      intelligence and optimized user experiences.
+  - title: 'LARGE SCALE PLATFORMS FOR AI AND DATA ANALYSIS: Amazon Reviews'
+    description: >-
+      The project is to create a recommendation system using the amazon reviews
+      and products dataset.
+  - title: SCC454 Group E Project
+    description: a big data project on the amazon reviews 2023 dataset.
+  - title: SCC454 - Large scale systems
+    description: >-
+      As part of the larg scale module we are working with 90GB of data doing
+      clustering and other kind of algorithms. To do on our machines we are
+      using a small subset of data and uni labs are limited to 10GB. Now we have
+      almost compelted code we would like to run on all the data and see fulle
+      final results
+  - title: Classifying Political Speeches using Natural Language Processing
+    description: >-
+      Ill be using different NLP methods to attempt to classify US political
+      speeches by party.
+  - title: >-
+      SCC.453 Natural Language Processing - "When Does Text Preprocessing Help
+      or Hurt? A Comparative Study Across Classical Models, Transformers, and
+      LLMs"
+    description: >-
+      I will be designing different preprocessing conditions (like: Strip +
+      Normalisation, Lowercasing, Stopword removal, lemmatisation) and testing
+      different combinations of those preprocessing conditions across classical
+      models, transformer-based models and Large Language Models (These are only
+      a few examples of the preprocessing conditions I plan to design). 
 
-- title: Understanding imprecise space and time in narratives through qualitative representations, reasoning, and visualisation
-  image: /assets/img/blocks/text-med.jpg
-  year: 2024
-  description:
-    - With the Lancaster Uni SCC-UCREL Hex (in about 13hours), we processed 1000 Holocaust survivors' testimonies to extract spatial entities - toponyms (towns/cities, countries, continents), geographic feature nouns (ghettos, hills, and camps), events and times as well as sentiments  and emotions.
-  author:
-    - Dr. Ignatius Ezeani
-    - Prof. Ian Gregory
-    - Prof. Paul Rayson
 
-- title: Urban Genome - A study of medieval urban development
-  image: /assets/img/blocks/text-med.jpg
-  year: 2024
-  description:
-    - Using NLP and graph computation techniques to analyse the relationships between specific actors affecting sets of physical locations in sparse/minimal medieval collections.
-    - Hex's high core count and large working memory enable high-speed graph queries.
-  author:
-    - Dr. John Vidler
-    - Prof. Keith Lilley
-    - Prof. Ian Gregory
-    - Prof. Paul Rayson
+      Now, for a good delivery of this project, I would like to run many
+      controlled variants and measure small deltas. Also, I may need to
+      fine-tune transformer models like DistilBERT which involves
+      backpropagation. I will be running multiple experiments on my chosen
+      datasets: Stanford Sentiment Treebank – 2 (SST-2) and TweetEval. I plan to
+      run multiple seeds and multiple conditions to ensure reproducibility of my
+      work.
+  - title: Binary Human-Written vs. Machine-Generated Text Classification
+    description: >-
+      Given a full text, determine whether it is human-written or
+      machine-generated.  This is based on the Sem Eval 2024 task 8
+  - title: >-
+      Base vs Instruction-Tuned Large Language Models: Evaluation and
+      Calibration of Hallucinations
+    description: >-
+      This project investigates the differences between base and
+      instruction-tuned large language models in terms of hallucination
+      behaviour, evaluating their factual reliability and response calibration.
+      It aims to apply and compare evaluation metrics and calibration techniques
+      to better understand and mitigate hallucinations in generative NLP
+      systems.
+  - title: >-
+      Base vs Instruction-Tuned Large Language Models: Evaluation and
+      Calibration of Hallucinations
+    description: >-
+      This project investigates the differences between base and
+      instruction-tuned large language models in terms of hallucination
+      behaviour, evaluating their factual reliability and response calibration.
+      It aims to apply and compare evaluation metrics and calibration techniques
+      to better understand and mitigate hallucinations in generative NLP
+      systems.
+  - title: >-
+      Comparing Frequency-Based Extractive Summarisation with LLM- Based
+      Abstractive Summarisation
+    description: >-
+      This project compares frequency-based extractive summarisation with
+      LLM-based abstractive summarisation using the CNN/DailyMail dataset. The
+      methods are evaluated using ROUGE and BERTScore, along with qualitative
+      analysis of coherence, fluency, and content coverage.
+  - title: SCC.451 Coursework
+    description: >-
+      Use pretrained deep neural networks on image datasets, extract features,
+      visualise them, cluster them, and classify images.Analyse the Seattle
+      weather dataset by preprocessing the data and applying at least two
+      clustering
+  - title: Hex SysOps
+    description: >-
+      Familiarisation with the Hex cluster and shadowing of SysOps maintenance
+      work, with a view to contributing to ongoing operational tasks.
 
-- title: "How do people with a diagnosis of bipolar talk about hypersexuality on Reddit: An exploratory analysis using Natural Language Processing methods."
-  image: /assets/img/blocks/text-med.jpg
-  year: 2024
-  description:
-    - We're using the Jupyter notebooks to run BERTopic models for exploratory analysis of my dataset and testing different transformer embeddings
-  author:
-    - Daisy Harvey
-    - Prof. Paul Rayson
-    - Prof. Steve Jones
-    - Dr. Jasper Palmier-Claus
-    - Fi Lobban
-
-- title: "Translating Akkadian Cuneiform into English"
-  image: /assets/img/blocks/text-med.jpg
-  year: 2024
-  description:
-    - Fine-tuning Large Language Models to translate Cuneiform (old clay tablet text) into English.
-    - A model is trained on a large Corpus in order to translate Akkadian, a long extinct language, into English for use in Assyriology.
-  author:
-    - Daniel Jones
-    - Dr. Mo El-Haj
-
-- title: "Measuring the Effect of Availability Attacks on Dynamic Obstacle Location Data for Reinforcement Learning Agents in 2D Grid World Environments"
-  image: /assets/img/blocks/gpu-med.jpg
-  year: 2024
-  description:
-    - In a 2D grid world environment, reinforcement learning (RL) agents are trained to navigate toward a goal while avoiding obstacles that move randomly within the environment. However, if an attacker introduces delays in the obstacle location data provided to the agent, it could disrupt the agent's ability to make timely and accurate decisions.
-    - This research investigates how such availability attacks affect the agent’s performance and success rate in reaching its goal. The study provides an understanding of the impact of availability attacks in this scenario, contributing to the development of more robust RL systems.
-  author:
-    - Ryan Hyland
-    - Professor Daniel Prince
-
-- title: "Investigating How Users Adapt Their Language Across Different Online Social Groups"
-  image: /assets/img/blocks/server-med.jpg
-  year: 2024
-  description:
-    - The proposed project aims to investigate how online users adapt their language across different online communities, focusing on the extent of language mirroring within these environments.
-    - Building off research on language mirroring in face-to-face interactions, this project will use Natural Language Processing (NLP) techniques to analyse language patterns in data collected from Reddit.
-  author:
-    - George Bland
-    - Dr. Alistair Baron
-
-- title: NLP Odyssey
-  image: /assets/img/blocks/text-med.jpg
-  year: 2024
-  description:
-    - This NLP application helps with Memory-Augmentation for Individuals dealing with Young-Onset Dementia.
-  author:
-    - Yash Bhatia
-    - Dr. Mo El-Haj
-
-- title: Spatial Narratives
-  image: /assets/img/blocks/text-med.jpg
-  year: 2025
-  description:
-    - Extracting and analysing spatial narratives from textual data
-  author:
-    - Ignatius Ezeani
-    - Prof. Paul Rayson
-
-- title: Wmatrix Annotation Parallelisation (qpym2)
-  image: /assets/img/blocks/gpu-med.jpg
-  year: 2025
-  description:
-    - Large scale parallelisation of corpus annotation pipelines
-  author:
-    - Prof. Paul Rayson
-
-- title: Applications of LLMs for UK court procedures
-  image: /assets/img/blocks/gpu-med.jpg
-  year: 2024
-  description:
-    - Legal NLP has been studied over decades and the recent advancements of the LLMs have pushed the possibilities of practical applications of Legal NLP to greater heights.
-    - We study how these LLMs can help lawyers, judges and general public in multiple legal tasks such as Legal judgment prediction, Prior case retrieval and Citation network analysis.
-  author:
-    - Damith Dola Mullage
-    - Prof Ruslan Mitkov
-
-- title: Various NLP projects
-  image: /assets/img/blocks/server-med.jpg
-  year: 2024
-  description:
-    - NLP projects, including processing large diachronic datasets, looking at language change over time.
-  author:
-    - Dr. Alistair Baron
-
-- title: LM Applications
-  image: /assets/img/blocks/gpu-med.jpg
-  year: 2024
-  description:
-    - This project focuses on developing language model (LM)-based applications for natural language processing (NLP) tasks, mainly aiming at the models' learning, multilingual and explainable capabilities.
-  author:
-    - Dr. Hansi Hettiarachchi
-
-- title: Transformer-Assisted LLM Source Code Summarisation
-  image: /assets/img/blocks/code-med.jpg
-  year: 2024
-  description:
-    - Neural Source Code Summarisation (NSCS) aims to generate natural language summaries of source code to improve developer and maintainer understanding of code.
-    - Many solutions to this problem use small transformer models, designed to be run locally on a workstation. Transformer-generated summaries often score well across many NLG metrics but fail to consistently produce clear and understandable natural language.
-    - Conversely, Large Language Model (LLM)s’ ability to generate clear and understandable natural language presents an exciting solution to this problem, especially with the increased availability of LLMs and the increase in capability of workstation hardware over recent years meaning that some LLMs can be run from developers' workstations.
-    - However, LLM summaries of code often differ greatly from developer-written summaries, and frequently miss key words and phrases resulting in low scores across NLG metrics.
-    - We show how combining these two methods by using transformer-generated summaries in prompt engineering may enable LLMs to create better source code summaries.
-  author:
-    - Jesse Phillips
-    - Prof. Tracy Hall
-    - Dr. Mo El-Haj
-
-- title: Sinhala Encoder-only Language Models
-  image: /assets/img/blocks/text-med.jpg
-  year: 2024
-  description:
-    - The recent developments of language models (LMs) have shown significant advancements in the field of natural language processing (NLP) as they have produced state-of-the-art results in many NLP tasks, outperforming previous machine learning models such as LSTMs.
-    - However, their effectiveness is largely dependent on having access to language resources for model pre-training.
-    - This project aims to build LMs for Sinhala; a low-resource language. 
-  author:
-    - Dr. Tharindu Ranasinghe
-
-- title: Detecting Fake News in The Era of LLMs
-  image: /assets/img/blocks/gpu-med.jpg
-  year: 2025
-  description:
-    - This project investigates the ability of SOTA models to differentiate between real news, human-generated fake news, and LLM-generated fake news.
-  author:
-    - Irfan Sabri
-    - Dr. Hansi Hettiarachchi

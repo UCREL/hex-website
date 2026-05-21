@@ -8,27 +8,21 @@ They range from research staff working on AI, ML and other topics; to PhD studen
 
 See also our <a href="/pages/publications">Publications</a> page for related works.
 
-</article>
-<div class="h-5">&nbsp;</div>
-<div class="w-full xl:max-w-screen-xl ml-auto mr-auto">
-  <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-    {% for project in projects | sort(attribute='year') | reverse %}<div class="card w-96 bg-base-100 shadow-xl image-full mb-5">
-      <figure><img src="{{ project.image }}" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">{{ project.title }}</h2>
-        {% for line in project.description %}
-          <p>{{ line }}</p>
-        {% endfor %}
-        <p style="flex-grow: 10;"></p>
-        <div class="card-actions justify-end text-ellipsis">
-          <ul>
-            {% for author in project.author %}
-              <li>{{ author }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>{% endfor %}
-  </div>
-</div>
-<article class="prose mx-auto">
+{%- for year, list in projects %}
+<ul class="text-lg">
+  <li>
+    <div class="pt-5 text-xl font-bold">Projects in {{ year }}</div>
+    <ul class="pl-5">
+      {%- for info in list %}
+        {%- if info.title %}
+          <li>
+            <div class="font-bold">{{ info.title | safe }}</div>
+            <div class="italic pt-2 ml-5 mr-5 mb-2">{{ info.description | safe }}</div>
+          </li>
+        {%- else %}
+          <li class="pt-2 font-bold">{{ info | safe }}</li>
+        {%- endif %}
+      {%- endfor %}
+    </ul>
+</ul>
+{%- endfor %}

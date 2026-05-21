@@ -21,8 +21,6 @@ If your work uses Hex, please use the following reference in your bibliography (
 {% endraw %}
 </pre>
 
-<h2>Existing Publications</h2>
-
 {% if publications.byYear | length %}
 {% for record in publications.byYear %}
 <div class="">
