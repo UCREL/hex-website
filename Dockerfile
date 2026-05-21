@@ -1,4 +1,4 @@
-FROM node:latest as BUILD
+FROM node:latest AS build
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y git
@@ -13,6 +13,6 @@ RUN git submodule update --init && \
 FROM nginx:latest
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=BUILD /home/node/build/dist/ /usr/share/nginx/html/
+COPY --from=build /home/node/build/dist/ /usr/share/nginx/html/
 
 EXPOSE 80
