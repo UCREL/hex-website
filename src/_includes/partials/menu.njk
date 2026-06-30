@@ -1,71 +1,63 @@
 <ul>
     <li>
-        <button class="btn btn-sm btn-outline w-full" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS">Toggle Theme</button>
+        <button class="btn btn-sm btn-outline w-full" data-toggle-theme="dark,light" data-act-class="dark">Toggle Theme</button>
     </li>
     <li>
         <a href="https://forms.cloud.microsoft/e/qhzG7ZSWTd" class="btn btn-sm btn-outline btn-primary">Request access to Hex</a>
     </li>
 
-    <li><a class="text-xl" href="/">Home</a></li>
+    <li><a class="text-xl {% if '/' == page.url %}active{% endif %}" href="/">Home</a></li>
     
     <hr />
-    <li><a href="/pages/publications">Publications</a></li>
+    <li><a href="/pages/publications" class="{% if '/pages/publications' in page.url %}active{% endif %}">Publications</a></li>
 
     <hr />
-    <li><a href="/pages/projects">Project Catalog</a></li>
-
-    <hr />
-    <li>
-        <summary><a href="/pages/slurm">Slurm Batch <div class="badge badge-warning">Beta</div></a></summary>
-        <ul>
-            <li><a href="/pages/slurm">Overview and Terms</a></li>
-        </ul>
-    </li>
+    <li><a href="/pages/projects" class="{% if '/pages/projects' in page.url %}active{% endif %}">Project Catalog</a></li>
 
     <hr />
     <li>
-        <summary><a href="/pages/managed-metal">Managed Metal <div class="badge badge-warning">Beta</div></a></summary>
+        <summary><a href="/pages/slurm" class="{% if '/pages/slurm' in page.url %}active{% endif %}">Slurm Batch <div class="badge badge-warning">Beta</div></a></summary>
         <ul>
-            <summary class="font-bold">Managed Metal Basics</summary>
-            <li><a href="/pages/managed-metal">Overview and Terms</a></li>
-            <li><a href="/pages/managed-metal/connecting">Connecting over SSH</a></li>
-            <li><a href="/pages/managed-metal/using-vscode">Connecting with VSCode</a></li>
-            <li><a href="/pages/managed-metal/basic-linux-tools">Basic Linux Tools - Terminal Commands</a></li>
+            <li><a href="/pages/slurm" class="{% if '/pages/slurm/' == page.url %}active{% endif %}">Overview and Terms</a></li>
+            <li><a href="/pages/slurm/connecting" class="{% if '/pages/slurm/connecting' in page.url %}active{% endif %}">Connecting over SSH</a></li>
+            <li><a href="/pages/slurm/using-vscode" class="{% if '/pages/slurm/using-vscode' in page.url %}active{% endif %}">Connecting with VSCode</a></li>
+            <li><a href="/pages/slurm/basic-linux-tools" class="{% if '/pages/slurm/basic-linux-tools' in page.url %}active{% endif %}">Basic Linux Tools - Terminal Commands</a></li>
+            <li><a href="/pages/slurm/running-jobs" class="{% if '/pages/slurm/running-jobs' in page.url %}active{% endif %}">Running Jobs on Slurm</a></li>
         </ul>
         <ul>
-            <summary class="font-bold mt-3">Python on Managed Metal</summary>
-            <li><a href="/pages/managed-metal/python/virtual-environments">Virtual Environments</a></li>
-            <li><a href="/pages/managed-metal/python/gpu-notebooks">Python GPU Notebooks</a></li>
+            <summary class="font-bold mt-3">Python via Slurm</summary>
+            <li><a href="/pages/slurm/python/virtual-environments" class="{% if '/pages/slurm/python/virtual-environments' in page.url %}active{% endif %}">Virtual Environments</a></li>
+            <!--<li><a href="/pages/slurm/python/gpu-notebooks" class="{% if '/pages/slurm/python/gpu-notebooks' in page.url %}active{% endif %}">Python GPU Notebooks</a></li>-->
             
         </ul>
     </li>
 
     <hr />
-    <li><a href="/pages/jupyter">Jupyter Notebooks <div class="badge badge-error">Alpha</div></a></li>
+    <li><a href="/pages/jupyter" class="line-through {% if '/pages/jupyter' in page.url %}active{% endif %}">Jupyter Notebooks <div class="badge badge-error">Alpha</div></a></li>
 
     <hr />
     <li>
-        <a href="/pages/articles">Articles and Guides</a>
+        <a href="/pages/articles" class="{% if '/pages/articles' in page.url %}active{% endif %}">Articles and Guides</a>
 
         <ul>
             <summary class="font-bold mt-3">Articles</summary>
             {% for post in collections.article %}
-                <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+                <li><a href="{{ post.url }}" class="{% if post.url == page.url %}active{% endif %}">{{ post.data.title }}</a></li>
             {% endfor %}
         </ul>
 
         <ul>
             <summary class="font-bold mt-3">Guides</summary>
             {% for post in collections.guide %}
-                <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+                <li><a href="{{ post.url }}" class="{% if post.url == page.url %}active{% endif %}">{{ post.data.title }}</a></li>
             {% endfor %}
         </ul>
     </li>
     <hr />
-    <li><a href="/pages/hardware">Hardware Information</a></li>
+    <li><a href="/pages/hardware" class="{% if '/pages/hardware' in page.url %}active{% endif %}">Hardware Information</a></li>
 
     <hr />
-    <li><a href="/pages/history">Hex's History</a></li>
+    <li><a href="/pages/history" class="{% if '/pages/history' in page.url %}active{% endif %}">Hex's History</a></li>
 
     <hr />
     <li>
@@ -77,15 +69,15 @@
         </ul>
         <ul>
             <summary class="font-bold mt-3">Related Sites</summary>
-            <li><a href="https://ucrel.lancs.ac.uk/">UCREL Group Homepage</a></li>
-            <li><a href="https://www.lancaster.ac.uk/scc/">School of Computing and Communcations</a></li>
-            <li><a href="https://www.lancaster.ac.uk/">Lancaster University</a></li>
+            <li><a href="https://ucrel.lancs.ac.uk/" target="_blank">UCREL Group Homepage</a></li>
+            <li><a href="https://www.lancaster.ac.uk/scc/" target="_blank">School of Computing and Communications</a></li>
+            <li><a href="https://www.lancaster.ac.uk/" target="_blank">Lancaster University</a></li>
         </ul>
         <ul>
             <summary class="font-bold mt-3">Miscellaneous</summary>
-            <li><a href="https://status.ucrel-hex.scc.lancs.ac.uk">Service Status</a></li>
-            <li><a href="https://ucrel-hex.scc.lancs.ac.uk/grafana">Logs and Metrics</a></li>
-            <li><a href="https://ucrel-hex.scc.lancs.ac.uk/grafana/public-dashboards/dd93a972f97b43b79fe2122cd4737294">Live Energy Usage</a></li>
+            <li><a href="https://status.ucrel-hex.scc.lancs.ac.uk" target="_blank">Service Status</a></li>
+            <li><a href="https://ucrel-hex.scc.lancs.ac.uk/grafana" target="_blank">Logs and Metrics</a></li>
+            <li><a href="https://ucrel-hex.scc.lancs.ac.uk/grafana/public-dashboards/dd93a972f97b43b79fe2122cd4737294" target="_blank">Live Energy Usage</a></li>
         </ul>
     </li>
 

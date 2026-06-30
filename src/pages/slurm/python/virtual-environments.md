@@ -1,17 +1,14 @@
 ---
 layout: page.njk
 tags:
-    - managed-metal
+    - slurm
     - guide
     - python
 title: Python Virtual Environments
 author: John Vidler
 back:
-    url: /pages/managed-metal/basic-linux-tools
-    text: Basic Linux Tools - Terminal Commands
-next:
-    url: /pages/managed-metal/python/gpu-notebooks
-    text: GPU Accelerated Jupyter Notebooks
+    url: /pages/slurm/running-jobs
+    text: Running Jobs on Slurm Workers
 ---
 
 Python's `venv` (short for "virtual environment") is a module that allows you to create isolated environments for your Python projects. This is particularly useful for managing dependencies and avoiding conflicts between packages required by different projects. Each virtual environment has its own Python interpreter and can have its own set of installed packages.
@@ -22,6 +19,12 @@ Key Benefits of Using venv:
   - Reproducibility: You can create a requirements.txt file to specify the packages and their versions, making it easier to replicate the environment.
 
 Using `venv` is a best practice for Python development, especially when working on multiple projects with different dependencies. It helps maintain clean and manageable environments, making it easier to develop, test, and deploy Python applications.
+
+## Slurm Runtime Environment
+
+If you're using Python in Slurm, Hex respects the initiating environment for its Slurm jobs. This means that you can run your code in its virtual environment by just ensuring that your bash environment is correct before launching `srun` or `sbatch`, and Slurm will pick this up and use it for the worker instances.
+
+If you have multiple environments for a more complex job, you can also individually activate each one for each step as part of your `sbatch` script.
 
 ## Basic Usage of venv
 ### 1. Creating a Virtual Environment

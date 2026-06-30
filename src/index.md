@@ -1,7 +1,18 @@
 ---
 layout: page.njk
-title: The UCREL-Hex Landing Page
+title: UCREL-Hex
 ---
+
+To request access to this resource, please select the button below and fill out the form.
+You will have to agree to our [Service Agreement](http://localhost:8081/pages/slurm/#service-notice), and this service is **only available to current staff, students and visiting academics at Lancaster University, UK**.
+
+<div class="w-full">
+    <div class="mx-auto w-fit">
+        <a href="https://forms.cloud.microsoft/e/qhzG7ZSWTd" class="btn btn-sm btn-outline btn-primary" style="font-weight: bold; padding: 1rem; padding-bottom: 2.5rem; border-width: 3px; font-size: 1.5rem;">Request access to Hex</a>
+    </div>
+</div>
+
+
 
 ## What is 'Hex'?
 Hex is a collection of GPU equipped hosts onto which single- multi- or GPU-processor jobs can be executed.
@@ -13,12 +24,30 @@ Note that Hex is not directly affiliated with any of these systems (although Hex
 
 ## Service Status? Downtime? Connection Issues?
 
-Jupyter Notebooks: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_jupyter-notebooks/uptimes/7d/badge.svg" alt="7-day status badge for the Jupyter service" /><br />
-iSCSI Backend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_truenas-iscsi-storage/uptimes/7d/badge.svg" alt="7-day status badge for the iSCSI service" /><br />
-Web Frontend: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_traefik-frontend/uptimes/7d/badge.svg" alt="7-day status badge for the Web Frontend service" /><br />
-Local DNS Service: <img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_scc-acme-dns-service/uptimes/7d/badge.svg" alt="7-day status badge for the DNS service" />
+<table class="w-fit">
+    <tr>
+        <th>Service</th>
+        <th class="text-center">Status</th>
+        <th class="text-center">7-Day</th>
+    </tr>
+    <tr>
+        <td>Login Node</td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_login-node/health/badge.svg" alt="" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_login-node/uptimes/7d/badge.svg" alt="" /></td>
+    </tr>
+    <tr>
+        <td>Web Frontend</td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_hex-website/health/badge.svg" alt="" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_hex-website/uptimes/7d/badge.svg" alt="" /></td>
+    </tr>
+    <tr>
+        <td>Package Sources</td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_scc-labs-apt-mirror-service/health/badge.svg" alt="" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_scc-labs-apt-mirror-service/uptimes/7d/badge.svg" alt="" /></td>
+    </tr>
+</table>
 
-See [this status page](https://status.ucrel-hex.scc.lancs.ac.uk) for all basic service status, and the Hex Teams channel for any maintenance announcements. If you continue to have issues contact j.vidler@lancaster.ac.uk or p.rayson@lancaster.ac.uk via email.
+See [this status page](https://status.ucrel-hex.scc.lancs.ac.uk) for a more complete list of statuses for each node and service, and check the Hex Teams channel for any maintenance announcements. If you continue to have issues contact j.vidler@lancaster.ac.uk or p.rayson@lancaster.ac.uk via email.
 
 ## How do I reference Hex in published works?
 If your work uses Hex, please use the following reference in your bibliography (in LaTeX/BibTex format):
@@ -40,13 +69,6 @@ If your work uses Hex, please use the following reference in your bibliography (
 
 See also our <a href="/pages/publications">Publications</a> page for related works.
 
-## What technologies does Hex use?
-The software stack for Hex is a combination of Docker, Swarm and Kubernetes, Docker Compose, Svelte, Javascript and Python, plus the required GPU drivers and operating systems for the hosts.
-The hardware stack includes a large number of small form factor desktop PCs running Ubuntu, each equipped with a 20-core Intel-based CPU, an A3000 GPU with 12GB of VRAM, and 32GB of RAM or equivalent technology. In the future we would like to expand this to include ARM64 based hardware hosts to enable very large numbers of densely co-located instances to be deployed
-
-User software is executed in one or more docker containers distributed across the cluster and we support <a href="https://github.com/UCREL/hex-runtime">a number of base images targetting the <a href="https://spacy.io/">spaCy</a> pipeline, with and without GPU support.
-However, and intel-based docker container images can be executed on Hex, although Hex's security requirements may mean that some have limited functionality
-
 ## Why is it called 'Hex'?
 'Hex' is named after an elaborate, Rube Goldberg-esque, magic-powered computer housed at Unseen University in the city of Ankh-Morpork, in author Terry Pratchett's Discworld series.
 It consists of a very large number of esoteric components including (but not limited to) an entire ant colony, large numbers of interconnected glass tubes, a mouse, and a stuffed teddy bear; the removal of any of which causes Hex to cease operating.
@@ -61,5 +83,7 @@ It consists of a very large number of esoteric components including (but not lim
 
 Excerpt from the works of Sir. Terry Pratchett
 
-<img loading="lazy" class="w-1/2" src="/assets/img/Hex-by-Dall-E.png" alt="A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett" />
+<div class="h-fit w-fit mx-auto p-5 bg-white rounded-xl shadow-lg">
+<img loading="lazy" src="/assets/img/Hex-by-Dall-E.png" alt="A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett" />
 <div class="text-center h-fit">A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett</div>
+</div>

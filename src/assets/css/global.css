@@ -58,6 +58,11 @@ code {
     @apply dark:bg-gray-200 !important;
     @apply dark:text-black !important;
 }
+
+p > code {
+    white-space: nowrap;
+}
+
 pre {
     @apply dark:bg-gray-200 !important;
 }
@@ -132,8 +137,8 @@ a {
     @apply p-1;
 }
 
-.navigation ul {
-    @apply pl-2;
+.navigation ul > li {
+    @apply pl-5;
 }
 
 .navigation li {
@@ -154,4 +159,19 @@ a {
 
 .navigation a {
     @apply hover:underline;
+}
+
+.navigation a.active { font-weight: bold; }
+.navigation a.active::after { content: "]"; }
+.navigation a.active::before { content: "["; }
+
+.line-through {
+    text-decoration: line-through;
+    text-decoration-thickness: 0.15em;
+}
+
+.icon {
+    padding: 2px;
+    background-color: #ffffff;
+    border-radius: 4px;
 }

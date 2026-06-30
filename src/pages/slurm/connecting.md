@@ -1,15 +1,15 @@
 ---
 layout: page.njk
 tags:
-    - managed-metal
+    - slurm
     - guide
 title: Connecting to Hex over SSH
 author: John Vidler
 back:
-    url: /pages/managed-metal
+    url: /pages/slurm
     text: Overview and Terms
 next:
-    url: /pages/managed-metal/using-vscode
+    url: /pages/slurm/using-vscode
     text: Using VSCode
 ---
 
@@ -44,23 +44,22 @@ You can generate a new SSH key on your local machine by following the steps outl
 Once these steps complete you should now have `id_ALGORITHM.key` and `id_ALGORITHM.pub` files created on your local machine.
 You should _never_ share your `.key` file, but you can freely share your `.pub` key.
 
-## Connections through the Lancaster University VPN
+## Connections on campus or through the Lancaster University VPN
 
 If you already have a connection to the university VPN (managed machines should come with this as default) you can directly
 access this website and any Hex compute node. To do this, simply append the following host definition to your `.ssh/config`
 file (Mac/Linux) or `%USERPROFILE%\.ssh\config` on Windows.
 
-> The windows path normally resolves to something roughly approximating `C:\Users\username\.ssh\config`
+> The windows path normally resolves to something roughly approximating `C:\Users\USERNAME\.ssh\config`
 
 ```
-Host hex-host-*.scc.lancs.ac.uk
+Host *.ucrel-hex.scc.lancs.ac.uk
     User YOUR_USERNAME
     Port 6767
     IdentityFile YOUR_PRIVATE_KEY
 ```
 
-Once this is in place, you should be able to connect to your assigned Node(s) by typing `ssh hex-host-???.scc.lancs.ac.uk`
-where `???` is your assigned node number. This should automatically drop you into a bash terminal session.
+Once this is in place, you should be able to connect to the login node by running `ssh login.ucrel-hex.scc.lancs.ac.uk` in powerhsell, terminal or console. This should automatically drop you into a bash terminal session on the login node.
 
 
 ### Unmanaged or Personal Machines
@@ -78,16 +77,22 @@ To connect, extend the `.ssh/config` we discussed above with a new entry for the
 
 ```
 Host scc-bastion
-    Hostname scc-bastion.lancs.ac.uk
-    Port 6767
-    ForwardAgent yes
-    User YOUR_USERNAME
-    IdentityFile YOUR_PRIVATE_KEY
+    Hostname scc-apex-dept.lancs.ac.uk
+     Port 6767
+     ForwardAgent yes
+     User YOUR_USERNAME
+     IdentityFile YOUR_PRIVATE_KEY_PATH
+     ControlMaster auto
+     ControlPath ~/.ssh/sockets/%r@%h-%p
+     ControlPersist 600
 
-Host hex-host-*.scc.lancs.ac.uk
+Host *.ucrel-hex.scc.lancs.ac.uk
     User YOUR_USERNAME
     Port 6767
-    IdentityFile YOUR_PRIVATE_KEY
+    IdentityFile YOUR_PRIVATE_KEY_PATH
     ForwardAgent yes
     ProxyJump scc-bastion
 ```
+
+Once you have confirmed you can make a basic connection, you can either directly start using Hex, or use our recommended approach with VSCode.
+For VSCode instructions, continue to the next page.

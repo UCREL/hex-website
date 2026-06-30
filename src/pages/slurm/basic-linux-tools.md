@@ -1,17 +1,17 @@
 ---
 layout: page.njk
 tags:
-    - managed-metal
+    - slurm
     - guide
     - linux
 title: Basic Linux Tools - Terminal Commands
 author: John Vidler
 back:
-    url: /pages/managed-metal/using-vscode
+    url: /pages/slurm/using-vscode
     text: Using VSCode
 next:
-    url: /pages/managed-metal/python/virtual-environments
-    text: Python Virtual Environments
+    url: /pages/slurm/running-jobs
+    text: Running Jobs on Slurm Workers
 ---
 
 Most of the interactions with the Managed Metal service are achieved through the terminal over SSH, or through VSCode, and to users new to Linux this can be quite a change from the way they might normally access computer systems. Thankfully, the system is largely self-describing.

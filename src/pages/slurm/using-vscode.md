@@ -1,22 +1,22 @@
 ---
 layout: page.njk
 tags:
-    - managed-metal
+    - slurm
     - guide
 author: John Vidler
 title: Using VSCode to connect to Hex
 back:
-    url: /pages/managed-metal/connecting
+    url: /pages/slurm/connecting
     text: Connecting over SSH
 next:
-    url: /pages/managed-metal/basic-linux-tools
+    url: /pages/slurm/basic-linux-tools
     text: Basic Linux Tools - Terminal Commands
 ---
 
 <div role="alert" class="alert">
   <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
 
-Note that this requires you can successfully connect to Hex with SSH. See [this guide on SSH access](/pages/managed-metal/connecting) before continuing.
+Note that this requires you can successfully connect to Hex with SSH. See [this guide on SSH access](/pages/slurm/connecting) before continuing.
 </div>
 
 For newer users, we strongly recommended using the [Microsoft Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
@@ -36,3 +36,5 @@ shortcut; this is either:
 any valid host entry.
 
 ![The VSCode command Palette showing the Remote-SSH connection option](/assets/img/vscode-remote-ssh.png)
+
+For the Slurm login node, simply enter `login.ucrel-hex.scc.lancs.ac.uk`. Once you have connected at least once the server name will be populated on the sidebar and this step can be skipped by just clicking it there.

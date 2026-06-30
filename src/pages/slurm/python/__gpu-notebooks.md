@@ -7,13 +7,13 @@ tags:
 title: GPU Accelerated Jupyter Notebooks
 author: John Vidler
 back:
-    url: /pages/managed-metal/python/virtual-environments
+    url: /pages/slurm/python/virtual-environments
     text: Python Virtual Environments
 ---
 
 If you already have Python notebooks that would benefit from GPU compute resources - or just want to use notebooks rather than running things from the terminal, it is possible to set up a notebook environment within VSCode that runs on a Hex worker node with a few additional setup steps.
 
-Please ensure you can [connect VSCode to your Hex instance](/pages/managed-metal/using-vscode/) before attempting these steps.
+Please ensure you can [connect VSCode to your Hex instance](/pages/slurm/using-vscode/) before attempting these steps.
 
 ![Installing the Jupyter service on a remote VSCode instance](/assets/img/vscode-notebooks/stage1.png)
 
