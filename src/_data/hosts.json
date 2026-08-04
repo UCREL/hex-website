@@ -1,7 +1,7 @@
 {
     "Core Hypervisors": {
         "hex-hypervisor-001": {
-          "note": "Primerily tasked with the core virtual services to run the cluster, including the login node, the web services, and the ingress instance. Also hosts 2 RTX A5000 cards for IO-coupled jobs.",
+          "note": "Primerily tasked with the core virtual services to run the cluster, including the login node, the web services, and the ingress instance. Also hosts 2 RTX A5000 cards for IO-coupled jobs. Donated by HP to the cluster. Thank you HP!",
           "sponsor": "HP",
           "status_badge": "https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hypervisor-nodes_hex-hypervisor-001/uptimes/1h/badge.svg",
           "cpu": "80 Core Intel Xeon 6240 @ 2.59Ghz",
