@@ -279,15 +279,6 @@
       statistical scores such as F1 and accuracy. Analysis of the AI's reason
       output and how useful it is within the real world though suggestion to
       moderators of users of a platform.
-  - title: Multi-layering LLM for multi-task Integration in Offensive text-moderation
-    description: >-
-      The project proposes to uses many layers of LLM that each is set to
-      classify a piece of text to be inputted within the prompt along with the
-      input text to enable to decoder LLM to understand the context of the
-      message better and generate a reason for the offensiveness classification
-      that matches it. Classifying text on topic, emotion, irony and target can
-      help the final offensive classifier to be more accurate and the reasoning
-      to be more trustworthy and understanding
   - title: 'AI Enhanced Bid Writing: A Multi-Agent Approach to Tender Automation'
     description: >-
       This project develops an AI Enhanced Bid Writing system designed to
@@ -297,14 +288,6 @@
     description: >-
       I am making a vision language model to predict the BIRADs score, density
       percentage and density classification of breasts from mammogram images.
-  - title: A Vision – Language Approach to Automated Mammogram Grading
-    description: >-
-      I am developing a vision language model to predict the BIRADs score,
-      density percentage and density class of breast images from mammograms. 
-  - title: A Vision – Language Approach to Automated Mammogram Grading
-    description: >-
-      I am developing a vision language model to predict the BIRADs, density
-      percentage and density classification of breast mammogram images.
   - title: 'CIdiomBench: A Benchmark for Evaluating LLMs on Chinese Idioms'
     description: >-
       This study aims to develop an evaluation framework to assess whether large
@@ -375,16 +358,6 @@
     description: >-
       Given a full text, determine whether it is human-written or
       machine-generated.  This is based on the Sem Eval 2024 task 8
-  - title: >-
-      Base vs Instruction-Tuned Large Language Models: Evaluation and
-      Calibration of Hallucinations
-    description: >-
-      This project investigates the differences between base and
-      instruction-tuned large language models in terms of hallucination
-      behaviour, evaluating their factual reliability and response calibration.
-      It aims to apply and compare evaluation metrics and calibration techniques
-      to better understand and mitigate hallucinations in generative NLP
-      systems.
   - title: >-
       Base vs Instruction-Tuned Large Language Models: Evaluation and
       Calibration of Hallucinations
