@@ -32,18 +32,18 @@ Note that Hex is not directly affiliated with any of these systems (although Hex
     </tr>
     <tr>
         <td>Login Node</td>
-        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_login-node/health/badge.svg" alt="" /></td>
-        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_login-node/uptimes/7d/badge.svg" alt="" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_login-node/health/badge.svg" alt="Current health status" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_login-node/uptimes/7d/badge.svg" alt="7-day uptime" /></td>
     </tr>
     <tr>
         <td>Web Frontend</td>
-        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_hex-website/health/badge.svg" alt="" /></td>
-        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_hex-website/uptimes/7d/badge.svg" alt="" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_hex-website/health/badge.svg" alt="Current health status" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/hex-core-services_hex-website/uptimes/7d/badge.svg" alt="7-day uptime" /></td>
     </tr>
     <tr>
         <td>Package Sources</td>
-        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_scc-labs-apt-mirror-service/health/badge.svg" alt="" /></td>
-        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_scc-labs-apt-mirror-service/uptimes/7d/badge.svg" alt="" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_iss-apt-mirror-service/health/badge.svg" alt="Current health status" /></td>
+        <td class="text-center"><img loading="lazy" class="h-fit inline" src="https://status.ucrel-hex.scc.lancs.ac.uk/api/v1/endpoints/scc-services_iss-apt-mirror-service/uptimes/7d/badge.svg" alt="7-day uptime" /></td>
     </tr>
 </table>
 
