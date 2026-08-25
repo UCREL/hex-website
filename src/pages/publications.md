@@ -22,13 +22,17 @@ If your work uses Hex, please use the following reference in your bibliography (
 </pre>
 
 {% if publications.byYear | length %}
-{% for record in publications.byYear %}
+{% for record in publications.byYear | reverse %}
 <div class="">
-    <a href={{ record.Fields.url | safe }}><h2 class="card-title">{{ record.Fields.title }}</h2></a>
+    {%- if record.Fields.preferred_url %}
+        <a href={{ record.Fields.preferred_url | safe }}><h2 class="card-title">({{ record.Fields.year }}) {{ record.Fields.title }}</h2></a>
+    {%- else %}
+        <h2 class="card-title">({{ record.Fields.year }}) {{ record.Fields.title }}</h2>
+    {%- endif %}
     {% if record.Fields.abstract %}
         <p class="italic w-5/6 ml-auto mr-auto">{{ record.Fields.abstract }}</p>
     {% endif %}
-    <span>{{ record.Fields.author }}, {{ record.Fields.year }}</span>
+    <span>{{ record.Fields.author }}</span>
 </div>
 {% endfor %}
 {% else %}
