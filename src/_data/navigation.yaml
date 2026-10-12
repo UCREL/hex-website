@@ -1,7 +1,8 @@
 # Sidebar navigation. Sections render in order; each item needs a title and url
 # (urls should end in a trailing slash to match Eleventy's page.url).
-# Optional item keys: badge (text), badgeStyle (warning|error|info), retired (true)
-# Optional section key: collection (appends every page in that collection)
+# Optional item keys: badge (text), badgeStyle (warning|error|info), retired (true),
+#   highlightTags (list of tags): also highlight this item on pages with any of these tags
+#   that don't otherwise appear in the navigation (e.g. stand-alone guides and articles)
 
 - title: Getting started
   items:
@@ -12,6 +13,9 @@
       external: true
     - title: Hardware information
       url: /pages/hardware/
+    - title: Guides and articles
+      url: /pages/articles/
+      highlightTags: [guide, article]
 
 - title: Slurm batch service
   badge: Beta
@@ -32,13 +36,20 @@
     - title: Undergraduate terms of use
       url: /pages/undergraduate-terms-of-use/
 
-- title: Guides
-  url: /pages/articles/
-  collection: guide
-
-- title: Articles
-  url: /pages/articles/
-  collection: article
+- title: Dask on Hex
+  items:
+    - title: Overview
+      url: /pages/slurm/python/dask/
+    - title: Installing Dask
+      url: /pages/slurm/python/dask/installing/
+    - title: Dask in a single Slurm job
+      url: /pages/slurm/python/dask/single-job/
+    - title: Scaling across nodes
+      url: /pages/slurm/python/dask/multi-node/
+    - title: Dashboard and good practice
+      url: /pages/slurm/python/dask/dashboard-and-tips/
+    - title: Dask with GPUs
+      url: /pages/slurm/python/dask/gpus/
 
 - title: About Hex
   items:

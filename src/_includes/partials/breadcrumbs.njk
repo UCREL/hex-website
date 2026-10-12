@@ -5,10 +5,8 @@
         <li><a href="/" class="hover:text-primary">Home</a></li>
         {%- if located and located.section.title != "Getting started" %}
         <li>{% if located.section.url %}<a href="{{ located.section.url }}" class="hover:text-primary">{{ located.section.title }}</a>{% else %}{{ located.section.title }}{% endif %}</li>
-        {%- elif tags and "guide" in tags %}
-        <li><a href="/pages/articles/" class="hover:text-primary">Guides</a></li>
-        {%- elif tags and "article" in tags %}
-        <li><a href="/pages/articles/" class="hover:text-primary">Articles</a></li>
+        {%- elif not located and tags | hasAnyTag(["guide", "article"]) %}
+        <li><a href="/pages/articles/" class="hover:text-primary">Guides and articles</a></li>
         {%- endif %}
     </ul>
 </div>

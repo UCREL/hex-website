@@ -1,6 +1,10 @@
-{%- macro navLink( item, current ) -%}
+{#- Each page highlights exactly one entry: the item for its own URL or, for pages that are not
+    listed here (stand-alone guides and articles), the item whose highlightTags match its tags #}
+{%- set inNavigation = navigation | navLocate(page.url) %}
+
+{%- macro navLink( item, current, pageTags, listed ) -%}
 <li>
-    <a href="{{ item.url }}" class="side-nav-link{% if item.retired %} retired{% endif %}"{% if item.url == current %} aria-current="page"{% endif %}{% if item.external %} target="_blank" rel="noopener"{% endif %}>
+    <a href="{{ item.url }}" class="side-nav-link{% if item.retired %} retired{% endif %}"{% if item.url == current %} aria-current="page"{% elif not listed and pageTags | hasAnyTag(item.highlightTags) %} aria-current="true"{% endif %}{% if item.external %} target="_blank" rel="noopener"{% endif %}>
         <span>{{ item.title }}</span>
         {%- if item.badge %}<span class="badge badge-xs badge-soft badge-{{ item.badgeStyle or 'info' }} shrink-0">{{ item.badge }}</span>{% endif %}
         {%- if item.external %}<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-3.5 shrink-0 opacity-50" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>{% endif %}
@@ -16,10 +20,7 @@
             {%- if section.badge %}<span class="badge badge-xs badge-soft badge-{{ section.badgeStyle or 'info' }} normal-case tracking-normal">{{ section.badge }}</span>{% endif %}
         </div>
         <ul class="flex flex-col gap-0.5">
-            {%- for item in section.items %}{{ navLink( item, page.url ) }}{% endfor %}
-            {%- if section.collection %}
-                {%- for post in collections[section.collection] %}{{ navLink( { title: post.data.title, url: post.url }, page.url ) }}{% endfor %}
-            {%- endif %}
+            {%- for item in section.items %}{{ navLink( item, page.url, tags, inNavigation ) }}{% endfor %}
         </ul>
     </div>
     {%- endfor %}

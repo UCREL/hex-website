@@ -49,6 +49,10 @@ module.exports = function(eleventyConfig) {
         return null;
     } );
 
+    eleventyConfig.addFilter( "hasAnyTag", function( tags, wanted ) {
+        return Array.isArray( tags ) && Array.isArray( wanted ) && wanted.some( tag => tags.includes( tag ) );
+    } );
+
     eleventyConfig.addGlobalData( "build", { year: new Date().getFullYear() } );
     
     // Shortcodes

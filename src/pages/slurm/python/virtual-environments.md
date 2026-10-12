@@ -9,6 +9,9 @@ author: John Vidler
 back:
     url: /pages/slurm/running-jobs
     text: Running Jobs on Slurm Workers
+next:
+    url: /pages/slurm/python/dask
+    text: Dask on Hex
 ---
 
 Python's `venv` (short for "virtual environment") is a module that allows you to create isolated environments for your Python projects. This is particularly useful for managing dependencies and avoiding conflicts between packages required by different projects. Each virtual environment has its own Python interpreter and can have its own set of installed packages.

@@ -162,7 +162,7 @@
         @apply bg-base-200 text-base-content;
     }
 
-    .side-nav-link[aria-current="page"] {
+    .side-nav-link[aria-current] {
         @apply bg-primary/10 font-medium text-primary;
     }
 
@@ -297,7 +297,8 @@
     content: none;
 }
 
-p > code {
+p > code,
+li > code {
     white-space: nowrap;
 }
 
