@@ -1,20 +1,26 @@
 {% if back or next %}
-<div class="flex justify-between">
+<nav class="not-prose mt-14 grid gap-4 sm:grid-cols-2" aria-label="Previous and next pages">
     <div>
         {% if back %}
-        <a class="btn no-underline" href={{ back.url }}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" /></svg>
-            {{ back.text or "Back" }}
+        <a class="card-link group flex h-full flex-col gap-1" href="{{ back.url }}">
+            <span class="flex items-center gap-1.5 text-xs font-medium text-base-content/55">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-3.5 transition-transform group-hover:-translate-x-0.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" /></svg>
+                Previous
+            </span>
+            <span class="font-medium text-primary">{{ back.text or "Back" }}</span>
         </a>
         {% endif %}
     </div>
     <div>
         {% if next %}
-        <a class="btn no-underline" href={{ next.url }}>
-            {{ next.text or "Next" }}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+        <a class="card-link group flex h-full flex-col items-end gap-1 text-right" href="{{ next.url }}">
+            <span class="flex items-center gap-1.5 text-xs font-medium text-base-content/55">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+            </span>
+            <span class="font-medium text-primary">{{ next.text or "Next" }}</span>
         </a>
         {% endif %}
     </div>
-</div>
+</nav>
 {% endif %}

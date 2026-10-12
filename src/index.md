@@ -1,15 +1,13 @@
 ---
-layout: page.njk
+layout: home.njk
 title: UCREL-Hex
 ---
 
 To request access to this resource, please select the button below and fill out the form.
-You will have to agree to our [Service Agreement](http://localhost:8081/pages/slurm/#service-notice), and this service is **only available to current staff, students and visiting academics at Lancaster University, UK**.
+You will have to agree to our [Service Agreement](/pages/slurm/#service-notice), and this service is **only available to current staff, students and visiting academics at Lancaster University, UK**.
 
-<div class="w-full">
-    <div class="mx-auto w-fit">
-        <a href="https://forms.cloud.microsoft/e/qhzG7ZSWTd" class="btn btn-sm btn-outline btn-primary" style="font-weight: bold; padding: 1rem; padding-bottom: 2.5rem; border-width: 3px; font-size: 1.5rem;">Request access to Hex</a>
-    </div>
+<div class="not-prose my-6">
+    <a href="https://forms.cloud.microsoft/e/qhzG7ZSWTd" class="btn btn-primary btn-lg">Request access to Hex</a>
 </div>
 
 
@@ -24,7 +22,7 @@ Note that Hex is not directly affiliated with any of these systems (although Hex
 
 ## Service Status? Downtime? Connection Issues?
 
-<table class="w-fit">
+<table class="w-auto">
     <tr>
         <th>Service</th>
         <th class="text-center">Status</th>
@@ -83,7 +81,7 @@ It consists of a very large number of esoteric components including (but not lim
 
 Excerpt from the works of Sir. Terry Pratchett
 
-<div class="h-fit w-fit mx-auto p-5 bg-white rounded-xl shadow-lg">
-<img loading="lazy" src="/assets/img/Hex-by-Dall-E.png" alt="A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett" />
-<div class="text-center h-fit">A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett</div>
-</div>
+<figure class="mx-auto w-fit rounded-box border border-base-300 bg-base-200 p-4">
+<img class="!my-0" loading="lazy" src="/assets/img/Hex-by-Dall-E.png" alt="A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett" />
+<figcaption class="text-center">A GPT generated image for the fantasy computer 'Hex' from the works of Sir. Terry Pratchett</figcaption>
+</figure>

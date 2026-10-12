@@ -1,0 +1,492 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+    themes: false;
+}
+
+/* Themes: indigo primary taken from the UCREL logo, cool neutral greys for long-form reading */
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    color-scheme: light;
+    --color-base-100: #ffffff;
+    --color-base-200: #f5f6fa;
+    --color-base-300: #e4e6ef;
+    --color-base-content: #1a1d2b;
+    --color-primary: #3a3ab4;
+    --color-primary-content: #ffffff;
+    --color-secondary: #5b5f76;
+    --color-secondary-content: #ffffff;
+    --color-accent: #0e7c86;
+    --color-accent-content: #ffffff;
+    --color-neutral: #23263a;
+    --color-neutral-content: #f1f2f7;
+    --color-info: #2563eb;
+    --color-info-content: #ffffff;
+    --color-success: #15803d;
+    --color-success-content: #ffffff;
+    --color-warning: #f2b43c;
+    --color-warning-content: #3a2800;
+    --color-error: #d32f2f;
+    --color-error-content: #ffffff;
+    --radius-selector: 0.5rem;
+    --radius-field: 0.5rem;
+    --radius-box: 0.75rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 0;
+    --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+    name: "dark";
+    prefersdark: true;
+    color-scheme: dark;
+    --color-base-100: #0f1118;
+    --color-base-200: #161925;
+    --color-base-300: #262a3b;
+    --color-base-content: #dde1ec;
+    --color-primary: #9496ff;
+    --color-primary-content: #0d0e2c;
+    --color-secondary: #a3a8c3;
+    --color-secondary-content: #0f1118;
+    --color-accent: #4fc3cc;
+    --color-accent-content: #04262a;
+    --color-neutral: #262a3b;
+    --color-neutral-content: #dde1ec;
+    --color-info: #60a5fa;
+    --color-info-content: #06192f;
+    --color-success: #4ade80;
+    --color-success-content: #052e14;
+    --color-warning: #e7a93a;
+    --color-warning-content: #231700;
+    --color-error: #f87171;
+    --color-error-content: #2d0606;
+    --radius-selector: 0.5rem;
+    --radius-field: 0.5rem;
+    --radius-box: 0.75rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 0;
+    --noise: 0;
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Syntax highlighting + code surface tokens */
+:root,
+[data-theme=light] {
+    --code-bg: #f6f7fb;
+    --code-border: #e4e6ef;
+    --code-text: #24292f;
+    --tok-comment: #6e7781;
+    --tok-keyword: #cf222e;
+    --tok-string: #0a3069;
+    --tok-number: #0550ae;
+    --tok-function: #8250df;
+    --tok-variable: #953800;
+    --tok-builtin: #116329;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme=light]) {
+        --code-bg: #0b0d13;
+        --code-border: #262a3b;
+        --code-text: #d6dae6;
+        --tok-comment: #7d8590;
+        --tok-keyword: #ff7b72;
+        --tok-string: #a5d6ff;
+        --tok-number: #79c0ff;
+        --tok-function: #d2a8ff;
+        --tok-variable: #ffa657;
+        --tok-builtin: #7ee787;
+    }
+}
+
+[data-theme=dark] {
+    --code-bg: #0b0d13;
+    --code-border: #262a3b;
+    --code-text: #d6dae6;
+    --tok-comment: #7d8590;
+    --tok-keyword: #ff7b72;
+    --tok-string: #a5d6ff;
+    --tok-number: #79c0ff;
+    --tok-function: #d2a8ff;
+    --tok-variable: #ffa657;
+    --tok-builtin: #7ee787;
+}
+
+@layer base {
+    html {
+        scroll-padding-top: 5rem;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        font-feature-settings: "cv11", "ss01";
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+}
+
+@layer components {
+    .skip-link {
+        @apply sr-only;
+    }
+
+    .skip-link:focus {
+        @apply not-sr-only fixed top-3 left-3 z-[100] rounded-field bg-primary px-4 py-2 text-primary-content;
+    }
+
+    /* Sidebar navigation */
+    .side-nav-heading {
+        @apply mb-2 flex items-center gap-2 px-3 text-xs font-semibold tracking-wider text-base-content/55 uppercase;
+    }
+
+    .side-nav-link {
+        @apply flex items-center justify-between gap-2 rounded-field px-3 py-1.5 text-[0.9rem] leading-snug text-base-content/75 transition-colors;
+    }
+
+    .side-nav-link:hover {
+        @apply bg-base-200 text-base-content;
+    }
+
+    .side-nav-link[aria-current="page"] {
+        @apply bg-primary/10 font-medium text-primary;
+    }
+
+    .side-nav-link.retired > span:first-child {
+        @apply line-through decoration-base-content/40;
+    }
+
+    /* On-this-page navigation */
+    .toc-link {
+        @apply -ml-px block border-l border-transparent py-1 pl-4 text-sm leading-snug text-base-content/60 transition-colors;
+    }
+
+    .toc-link:hover {
+        @apply border-base-content/30 text-base-content;
+    }
+
+    .toc-link.is-active {
+        @apply border-primary font-medium text-primary;
+    }
+
+    .toc-link.level-3 {
+        @apply pl-7 text-[0.8rem];
+    }
+
+    /* Callouts (used for site notices and in-page alerts) */
+    .callout {
+        @apply flex gap-3 rounded-box border px-4 py-3 text-sm leading-relaxed;
+    }
+
+    .callout-warning {
+        @apply border-warning/40 bg-warning/10;
+    }
+
+    .callout-warning > svg {
+        @apply text-warning;
+    }
+
+    .table-wrap {
+        @apply overflow-x-auto;
+    }
+
+    .card-link {
+        @apply block rounded-box border border-base-300 bg-base-100 p-5 transition hover:border-primary/50 hover:shadow-[0_4px_20px_-8px] hover:shadow-primary/30;
+    }
+
+    /* Background used behind the home page header: a soft glow plus a tiled hexagon outline.
+       The hexagons are an SVG mask, so their colour follows the theme. */
+    .hero-hex {
+        @apply relative isolate overflow-hidden;
+        background-image: radial-gradient(ellipse 60% 70% at 15% 0%, color-mix(in oklab, var(--color-primary) 18%, transparent), transparent 70%);
+    }
+
+    .hero-hex::before {
+        content: "";
+        @apply absolute inset-0 -z-10;
+        background-color: color-mix(in oklab, var(--color-primary) 22%, transparent);
+        --hex-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41.569' height='72' viewBox='0 0 41.569 72'%3E%3Cpath fill='none' stroke='black' stroke-width='1.25' d='M20.785 0 41.569 12v24L20.785 48 0 36V12ZM20.785 48v24'/%3E%3C/svg%3E");
+        -webkit-mask-image: var(--hex-tile), linear-gradient(to bottom, black 20%, transparent);
+        mask-image: var(--hex-tile), linear-gradient(to bottom, black 20%, transparent);
+        -webkit-mask-size: 41.569px 72px, 100% 100%;
+        mask-size: 41.569px 72px, 100% 100%;
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
+    }
+}
+
+/* Long-form content */
+.prose {
+    --tw-prose-body: color-mix(in oklab, var(--color-base-content) 88%, transparent);
+    --tw-prose-headings: var(--color-base-content);
+    --tw-prose-lead: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+    --tw-prose-links: var(--color-primary);
+    --tw-prose-bold: var(--color-base-content);
+    --tw-prose-counters: color-mix(in oklab, var(--color-base-content) 55%, transparent);
+    --tw-prose-bullets: color-mix(in oklab, var(--color-base-content) 35%, transparent);
+    --tw-prose-hr: var(--color-base-300);
+    --tw-prose-quotes: var(--color-base-content);
+    --tw-prose-quote-borders: var(--color-primary);
+    --tw-prose-captions: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+    --tw-prose-kbd: var(--color-base-content);
+    --tw-prose-code: var(--color-base-content);
+    --tw-prose-pre-code: var(--code-text);
+    --tw-prose-pre-bg: var(--code-bg);
+    --tw-prose-th-borders: var(--color-base-300);
+    --tw-prose-td-borders: var(--color-base-300);
+    max-width: none;
+}
+
+.prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply font-medium underline decoration-primary/35 underline-offset-[3px] transition-colors hover:decoration-primary;
+}
+
+.prose :where(h1, h2, h3, h4) {
+    @apply font-semibold tracking-tight;
+}
+
+.prose h2 {
+    @apply border-t border-base-300 pt-8;
+}
+
+.prose > :first-child h2,
+.prose > h2:first-child,
+.prose > .heading-wrapper:first-child h2 {
+    @apply border-t-0 pt-0;
+}
+
+/* Heading permalinks: only visible on hover / focus */
+.heading-wrapper {
+    @apply relative;
+}
+
+.prose .anchor {
+    @apply ml-2 font-normal text-base-content/30 no-underline opacity-0 transition-opacity;
+}
+
+.prose :where(h1, h2, h3):hover .anchor,
+.prose .anchor:focus {
+    @apply opacity-100;
+}
+
+.prose .anchor:hover {
+    @apply text-primary;
+}
+
+/* Inline code */
+.prose :where(:not(pre) > code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply rounded-md border border-base-300 bg-base-200 px-1.5 py-0.5 text-[0.85em] font-medium;
+}
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+    content: none;
+}
+
+p > code {
+    white-space: nowrap;
+}
+
+/* Code blocks */
+.prose pre,
+pre.nostyle {
+    @apply rounded-box border text-[0.85rem] leading-relaxed;
+    border-color: var(--code-border);
+    background: var(--code-bg);
+    color: var(--code-text);
+    overflow-x: auto;
+}
+
+.prose pre code {
+    font-family: var(--font-mono);
+}
+
+pre.nostyle {
+    @apply px-5 py-4 font-mono;
+}
+
+.code-block {
+    @apply relative;
+}
+
+.code-copy {
+    @apply btn btn-xs btn-ghost absolute top-2 right-2 font-sans font-medium opacity-0 transition-opacity;
+    color: var(--code-text);
+}
+
+.code-block:hover .code-copy,
+.code-copy:focus-visible {
+    @apply opacity-100;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: var(--tok-comment);
+    font-style: italic;
+}
+
+.token.keyword,
+.token.atrule,
+.token.important,
+.token.selector {
+    color: var(--tok-keyword);
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.url {
+    color: var(--tok-string);
+}
+
+.token.number,
+.token.boolean,
+.token.constant,
+.token.symbol {
+    color: var(--tok-number);
+}
+
+.token.function,
+.token.class-name {
+    color: var(--tok-function);
+}
+
+.token.variable,
+.token.property,
+.token.parameter,
+.token.attr-name,
+.token.tag {
+    color: var(--tok-variable);
+}
+
+.token.builtin,
+.token.inserted {
+    color: var(--tok-builtin);
+}
+
+.token.deleted {
+    color: var(--tok-keyword);
+}
+
+.token.operator,
+.token.punctuation {
+    color: inherit;
+    opacity: 0.8;
+}
+
+/* Quotes */
+.prose blockquote {
+    @apply rounded-r-box bg-base-200 py-1 pr-5 not-italic;
+}
+
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:last-of-type::after {
+    content: none;
+}
+
+/* Tables */
+.prose table {
+    @apply text-sm;
+}
+
+.prose thead th {
+    @apply bg-base-200 px-3 py-2;
+}
+
+.prose tbody td {
+    @apply px-3;
+}
+
+/* Images and figures */
+.prose img {
+    @apply rounded-box;
+}
+
+.prose figure > div {
+    @apply mt-2 text-sm text-base-content/60;
+}
+
+img.inline {
+    display: inline-block;
+    max-height: 1lh;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.icon {
+    padding: 2px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+/* daisyUI components dropped into markdown content */
+.prose .alert {
+    @apply my-6 items-start rounded-box border border-warning/40 bg-warning/10 text-base-content;
+}
+
+.prose .alert > svg {
+    @apply mt-1 text-warning;
+}
+
+.prose .alert > p {
+    @apply m-0;
+}
+
+.prose .kbd {
+    @apply kbd-sm font-mono;
+}
+
+.line-through {
+    text-decoration: line-through;
+    text-decoration-thickness: 0.15em;
+}
+
+/* Mermaid diagrams */
+pre:has(> code.language-mermaid) {
+    background-color: transparent;
+    border: 0;
+}
+
+code.language-mermaid > .mermaid > svg {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Pagefind search UI, mapped onto the site theme */
+#search-dialog .pagefind-ui {
+    --pagefind-ui-scale: 0.85;
+    --pagefind-ui-primary: var(--color-primary);
+    --pagefind-ui-text: var(--color-base-content);
+    --pagefind-ui-background: var(--color-base-100);
+    --pagefind-ui-border: var(--color-base-300);
+    --pagefind-ui-tag: var(--color-base-200);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 0.5rem;
+    --pagefind-ui-font: var(--font-sans);
+}
+
+#search-dialog .pagefind-ui__result-link {
+    color: var(--color-primary);
+}
+
+#search-dialog mark {
+    @apply rounded-sm bg-primary/20 px-0.5 text-inherit;
+}

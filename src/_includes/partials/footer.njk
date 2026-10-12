@@ -1,4 +1,43 @@
-<footer class="p-5">
-    <!-- <div class="footer">
-    </div> -->
+<footer class="border-t border-base-300 bg-base-200/50">
+    <div class="mx-auto grid max-w-[90rem] gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-10">
+        <div class="flex flex-col gap-3">
+            <a href="https://ucrel.lancs.ac.uk/" class="flex items-center gap-3" target="_blank" rel="noopener">
+                <img src="/assets/img/logos/ucrel.png" alt="UCREL" class="h-10 w-auto rounded-[5px]">
+                <span class="font-semibold">UCREL Hex</span>
+            </a>
+            <p class="text-sm leading-relaxed text-base-content/65">A shared, hybrid multiprocessor system run by UCREL in the School of Computing and Communications, Lancaster University.</p>
+        </div>
+
+        <div>
+            <h2 class="mb-3 text-sm font-semibold">Contacts</h2>
+            <ul class="flex flex-col gap-2 text-sm text-base-content/70">
+                <li><a class="hover:text-primary" href="mailto:j.vidler@lancaster.ac.uk">Dr. John Vidler</a></li>
+                <li><a class="hover:text-primary" href="mailto:p.rayson@lancaster.ac.uk">Prof. Paul Rayson</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="mb-3 text-sm font-semibold">Service</h2>
+            <ul class="flex flex-col gap-2 text-sm text-base-content/70">
+                <li><a class="hover:text-primary" href="https://status.ucrel-hex.scc.lancs.ac.uk" target="_blank" rel="noopener">Service status</a></li>
+                <li><a class="hover:text-primary" href="https://ucrel-hex.scc.lancs.ac.uk/grafana" target="_blank" rel="noopener">Logs and metrics</a></li>
+                <li><a class="hover:text-primary" href="https://ucrel-hex.scc.lancs.ac.uk/grafana/public-dashboards/dd93a972f97b43b79fe2122cd4737294" target="_blank" rel="noopener">Live energy usage</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="mb-3 text-sm font-semibold">Related sites</h2>
+            <ul class="flex flex-col gap-2 text-sm text-base-content/70">
+                <li><a class="hover:text-primary" href="https://ucrel.lancs.ac.uk/" target="_blank" rel="noopener">UCREL group homepage</a></li>
+                <li><a class="hover:text-primary" href="https://www.lancaster.ac.uk/scc/" target="_blank" rel="noopener">School of Computing and Communications</a></li>
+                <li><a class="hover:text-primary" href="https://www.lancaster.ac.uk/" target="_blank" rel="noopener">Lancaster University</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="border-t border-base-300">
+        <div class="mx-auto flex max-w-[90rem] flex-wrap items-center justify-between gap-2 px-4 py-5 text-xs text-base-content/55 sm:px-6 lg:px-10">
+            <span>© {{ build.year }} UCREL, Lancaster University</span>
+            <a class="hover:text-primary" href="https://github.com/UCREL/hex-website" target="_blank" rel="noopener">Source on GitHub</a>
+        </div>
+    </div>
 </footer>

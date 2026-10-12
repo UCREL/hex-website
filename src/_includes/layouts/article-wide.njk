@@ -1,14 +1,4 @@
-{% extends "./base.njk" %}
+{% extends "./doc.njk" %}
 
-{% block content %}
-<div class="container mx-auto">
-	<div class="gap-8">
-		<article class="article prose lg:prose-2xl mx-auto">
-			<h1 class="pt-5 !mb-0">{{ title }}</h1>
-			<div class="italic text-sm">By: {{ author | safe }}</div>
-			{{ content | safe }}
-			{% include "partials/pageflow.njk" %}
-		</article>
-	</div>
-</div>
-{% endblock %}
+{% block mainClass %}max-w-5xl{% endblock %}
+{% block aside %}{% endblock %}

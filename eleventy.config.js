@@ -1,9 +1,7 @@
 const fs = require( 'fs' );
 const path = require( 'path' );
 const postcss = require( 'postcss' );
-const tailwindcss = require( 'tailwindcss' );
-const autoprefixer = require( 'autoprefixer' );
-const cssnano = require( "cssnano" );
+const tailwindcss = require( '@tailwindcss/postcss' );
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const slugify = require("slugify");
@@ -20,6 +18,38 @@ module.exports = function(eleventyConfig) {
     
     // Filters
     require( './src/_11ty/filters/is_array.js' )( eleventyConfig );
+
+    // Builds the 'On this page' list from the rendered h2/h3 headings
+    eleventyConfig.addFilter( "toc", function( html ) {
+        const headings = [];
+        const re = /<h([23])[^>]*\sid="([^"]+)"[^>]*>([\s\S]*?)<\/h\1>/g;
+        let match;
+        while( (match = re.exec( html || "" )) !== null ) {
+            const text = match[3]
+                .replace( /<a class="anchor"[\s\S]*?<\/a>/g, "" )
+                .replace( /<[^>]+>/g, "" )
+                .trim();
+            if( text )
+                headings.push( { level: parseInt( match[1] ), id: match[2], text } );
+        }
+        return headings;
+    } );
+
+    eleventyConfig.addFilter( "readingTime", function( html ) {
+        const words = (html || "").replace( /<[^>]+>/g, " " ).split( /\s+/ ).filter( Boolean ).length;
+        return Math.max( 1, Math.round( words / 220 ) );
+    } );
+
+    // Finds the navigation section (and item) that contains the given URL
+    eleventyConfig.addFilter( "navLocate", function( nav, url ) {
+        for( const section of nav || [] )
+            for( const item of section.items || [] )
+                if( item.url === url )
+                    return { section, item };
+        return null;
+    } );
+
+    eleventyConfig.addGlobalData( "build", { year: new Date().getFullYear() } );
     
     // Shortcodes
     require( './src/_11ty/shortcodes/gravatar.js' )( eleventyConfig );
@@ -34,6 +64,7 @@ module.exports = function(eleventyConfig) {
     // Manual ignores
     eleventyConfig.ignores.add( "README.md" );
     eleventyConfig.ignores.add( "_11ty" );
+    eleventyConfig.ignores.add( "src/_11ty/**" );
     
     // Sorting order for Articles and Guides
     function sortByTitle(a,b) {
@@ -43,10 +74,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection( "article", (collectionApi) => collectionApi.getFilteredByTag("article").filter(page => !Boolean(page.data.draft)).sort( sortByTitle ) );
     eleventyConfig.addCollection( "guide", (collectionApi) => collectionApi.getFilteredByTag("guide").filter(page => !Boolean(page.data.draft)).sort( sortByTitle ) );
     
-    // Tailwind and PostCSS watch hooks:
-    eleventyConfig.addWatchTarget("./src/assets/css/tailwind.css");
-    eleventyConfig.addWatchTarget("./tailwind.config.js");
-    eleventyConfig.addWatchTarget("./postcss.config.js");
+    // Tailwind watch hooks (theme + plugin config lives in the CSS itself):
+    eleventyConfig.addWatchTarget("./src/assets/css/");
+    eleventyConfig.addWatchTarget("./src/assets/js/");
+    eleventyConfig.addPassthroughCopy("src/assets/js");
 
     // PostCSS transform + dumb reload mechanism
     eleventyConfig.on( 'eleventy.before', async ({ dir, runMode, outputMode }) => {
@@ -62,8 +93,8 @@ module.exports = function(eleventyConfig) {
         compile: async function (content, inputPath) {
             let parsed = path.parse(inputPath);
             if (parsed && parsed.ext.endsWith('.css')) {
-                const minified = await postcss([tailwindcss(require( './tailwind.config.js' )), autoprefixer(), cssnano()])
-                .process(content, { from: undefined });
+                const minified = await postcss([tailwindcss({ base: __dirname, optimize: { minify: true } })])
+                .process(content, { from: inputPath });
                 
                 return () => minified.css;
             }
@@ -71,10 +102,9 @@ module.exports = function(eleventyConfig) {
         }
     })
     
-    markdownItAnchor
     const linkAfterHeader = markdownItAnchor.permalink.linkInsideHeader({
         class: "anchor",
-        symbol: "<span>#</span>",
+        symbol: "<span aria-hidden=\"true\">#</span>",
         assistiveText: title => `Permalink to “${title}”`,
         style: "aria-labelledby",
     });
@@ -88,7 +118,6 @@ module.exports = function(eleventyConfig) {
         }),
         tabIndex: false,
         permalink(slug, opts, state, idx) {
-            console.log( slug );
             state.tokens.splice(
                 idx,
                 0,
@@ -113,6 +142,10 @@ module.exports = function(eleventyConfig) {
     
     /* Markdown Overrides */
     let markdownLibrary = markdownIt( { html: true } ).use(markdownItAnchor, markdownItAnchorOptions);
+
+    // Wrap tables so wide ones scroll horizontally instead of breaking the layout on small screens
+    markdownLibrary.renderer.rules.table_open = () => '<div class="table-wrap"><table>\n';
+    markdownLibrary.renderer.rules.table_close = () => '</table></div>\n';
     eleventyConfig.setLibrary("md", markdownLibrary);
 
     return {

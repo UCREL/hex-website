@@ -21,20 +21,32 @@ If your work uses Hex, please use the following reference in your bibliography (
 {% endraw %}
 </pre>
 
+## Publications using Hex
+
 {% if publications.byYear | length %}
-{% for record in publications.byYear | reverse %}
-<div class="">
-    {%- if record.Fields.preferred_url %}
-        <a href={{ record.Fields.preferred_url | safe }}><h2 class="card-title">({{ record.Fields.year }}) {{ record.Fields.title }}</h2></a>
-    {%- else %}
-        <h2 class="card-title">({{ record.Fields.year }}) {{ record.Fields.title }}</h2>
-    {%- endif %}
-    {% if record.Fields.abstract %}
-        <p class="italic w-5/6 ml-auto mr-auto">{{ record.Fields.abstract }}</p>
-    {% endif %}
-    <span>{{ record.Fields.author }}</span>
-</div>
-{% endfor %}
+<ol class="not-prose flex flex-col gap-4">
+{%- for record in publications.byYear | reverse %}
+<li class="rounded-box border border-base-300 bg-base-100 p-5">
+    <div class="flex items-start gap-4">
+        <span class="badge badge-soft badge-primary mt-0.5 shrink-0 font-mono">{{ record.Fields.year }}</span>
+        <div class="min-w-0">
+            {%- if record.Fields.preferred_url %}
+                <h3 class="font-semibold leading-snug"><a class="hover:text-primary hover:underline" href={{ record.Fields.preferred_url | safe }}>{{ record.Fields.title }}</a></h3>
+            {%- else %}
+                <h3 class="font-semibold leading-snug">{{ record.Fields.title }}</h3>
+            {%- endif %}
+            <p class="mt-1 text-sm text-base-content/60">{{ record.Fields.author }}</p>
+            {%- if record.Fields.abstract %}
+                <details class="group mt-3 text-sm">
+                    <summary class="cursor-pointer font-medium text-primary select-none">Abstract</summary>
+                    <p class="mt-2 leading-relaxed text-base-content/75">{{ record.Fields.abstract }}</p>
+                </details>
+            {%- endif %}
+        </div>
+    </div>
+</li>
+{%- endfor %}
+</ol>
 {% else %}
 Nothing yet! But watch this space...
 {% endif %}

@@ -1,0 +1,55 @@
+{% extends "./base.njk" %}
+
+{% set quicklinks = [
+	{ title: "Connect over SSH", text: "Set up your keys and log in to the Slurm login node.", url: "/pages/slurm/connecting/", icon: "M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" },
+	{ title: "Run jobs on Slurm", text: "Submit batch and interactive jobs to the GPU worker nodes.", url: "/pages/slurm/running-jobs/", icon: "M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 010 1.972l-11.54 6.347a1.125 1.125 0 01-1.667-.986V5.653z" },
+	{ title: "Hardware", text: "CPUs, GPUs, memory and storage across every node.", url: "/pages/hardware/", icon: "M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" },
+	{ title: "Guides & articles", text: "Walkthroughs for Hex, the HEC, BEDE and more.", url: "/pages/articles/", icon: "M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" }
+] %}
+
+{% block content %}
+<main id="main" data-pagefind-body>
+	<section class="hero-hex border-b border-base-300">
+		<div class="px-4 py-14 sm:px-6 sm:py-20 lg:px-10">
+			<div class="max-w-3xl">
+				<span class="badge badge-soft badge-primary mb-5 font-medium">Phase 3 · Lancaster University</span>
+				<h1 class="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">UCREL Hex</h1>
+				<p class="mt-4 text-lg text-base-content/70 sm:text-xl">A shared, hybrid multiprocessor system: GPU-equipped compute for development, research and teaching.</p>
+				<div class="mt-8 flex flex-wrap gap-3">
+					<a href="/pages/slurm/" class="btn btn-primary">
+						Get started
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+					</a>
+					<a href="/pages/articles/" class="btn btn-outline">Browse guides</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="border-b border-base-300 px-4 py-10 sm:px-6 lg:px-10" aria-label="Quick links" data-pagefind-ignore>
+		<div class="grid gap-4 sm:grid-cols-2 2xl:grid-cols-4">
+			{% for link in quicklinks %}
+			<a href="{{ link.url }}" class="card-link group flex gap-4">
+				<span class="flex size-10 shrink-0 items-center justify-center rounded-field bg-primary/10 text-primary">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" class="size-5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="{{ link.icon }}" /></svg>
+				</span>
+				<span class="flex flex-col gap-1">
+					<span class="font-semibold group-hover:text-primary">{{ link.title }}</span>
+					<span class="text-sm text-base-content/60">{{ link.text }}</span>
+				</span>
+			</a>
+			{% endfor %}
+		</div>
+	</section>
+
+	<div class="flex gap-12 px-4 py-10 sm:px-6 lg:px-10 lg:py-12">
+		<div class="mx-auto min-w-0 max-w-3xl flex-1">
+			{% include "partials/global-notify.njk" %}
+			<article class="prose prose-base sm:prose-lg">
+				{{ content | safe }}
+			</article>
+		</div>
+		{% include "partials/toc.njk" %}
+	</div>
+</main>
+{% endblock %}

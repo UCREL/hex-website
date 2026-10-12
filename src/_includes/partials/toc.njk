@@ -1,0 +1,17 @@
+{%- set headings = content | toc %}
+<aside class="hidden w-56 shrink-0 xl:block" aria-label="On this page">
+    {%- if headings | length > 1 %}
+    <div class="sticky top-24 max-h-[calc(100dvh-8rem)] overflow-y-auto">
+        <h2 class="mb-3 text-xs font-semibold tracking-wider text-base-content/55 uppercase">On this page</h2>
+        <ul class="border-l border-base-300" data-toc>
+            {%- for h in headings %}
+            <li><a href="#{{ h.id }}" class="toc-link level-{{ h.level }}">{{ h.text | safe }}</a></li>
+            {%- endfor %}
+        </ul>
+        <a href="#main" class="mt-6 inline-flex items-center gap-1.5 text-xs font-medium text-base-content/55 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-3.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" /></svg>
+            Back to top
+        </a>
+    </div>
+    {%- endif %}
+</aside>

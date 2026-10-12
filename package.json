@@ -1,30 +1,28 @@
 {
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@kevingimbel/eleventy-plugin-mermaid": "^2.2.1",
-    "@tailwindcss/typography": "^0.5.10",
-    "autoprefixer": "^10.4.17",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
     "bib2json": "^0.0.1",
-    "cssnano": "^6.0.5",
-    "daisyui": "^4.7.2",
-    "markdown-it-anchor": "^9.2.0",
+    "daisyui": "^5.7.47",
+    "markdown-it-anchor": "^10.0.0",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.35",
+    "pagefind": "^1.5.2",
+    "postcss": "^8.5.29",
     "slugify": "^1.6.6",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^4.3.3"
   },
   "scripts": {
-    "start": "npm-run-all -p dev:*",
+    "start": "run-s build dev",
+    "dev": "eleventy --serve --port=8081",
     "build": "run-s build:*",
-    "dev:11ty": "eleventy --serve --port=8081",
-    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o build/assets/css/tailwind.css --watch --postcss",
     "build:11ty": "eleventy",
-    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o build/assets/css/tailwind.css --postcss"
+    "build:search": "pagefind --site dist"
   },
   "dependencies": {
     "csv-parse": "^6.2.1",
-    "js-yaml": "^4.1.0",
-    "theme-change": "^2.5.0"
+    "js-yaml": "^4.1.0"
   }
 }

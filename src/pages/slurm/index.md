@@ -13,8 +13,8 @@ This service is handled on a per-request basis, and to request access please use
 
 If approved, you will be given access to the login node, from which you can deploy jobs to any of the worker nodes, including various configurations of GPU-equipped hardware.
 
-<form action="https://forms.office.com/e/qhzG7ZSWTd" method="get" class="w-full place-content-center grid">
-    <button class="btn btn-outline border-red-600 border-2">The Hex Sign-Up Form</button>
+<form action="https://forms.office.com/e/qhzG7ZSWTd" method="get" class="not-prose my-6">
+    <button class="btn btn-primary">The Hex Sign-Up Form</button>
 </form>
 
 <br />
@@ -39,8 +39,8 @@ with the following statements:
 + Admin users (Dr John Vidler and SCC-Systems users) may inspect data held in
   your home folder, and logs if we suspect anything untoward.
 
-<form action="/pages/undergraduate-terms-of-use" method="get" class="w-full place-content-center grid">
-    <button class="btn btn-outline border-red-600 border-2">Additional Terms for Undergraduate and Masters Students</button>
+<form action="/pages/undergraduate-terms-of-use" method="get" class="not-prose my-6">
+    <button class="btn btn-outline">Additional Terms for Undergraduate and Masters Students</button>
 </form>
 
 <br />

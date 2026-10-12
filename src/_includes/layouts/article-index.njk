@@ -1,35 +1,35 @@
-{% extends "./base.njk" %}
+{% extends "./doc.njk" %}
 
-{% block content %}
-<div class="container mx-auto">
-	<div class="gap-8">
-		<article class="article prose lg:prose-xl mx-auto">
-			<h1 class="pt-5">{{ title }}</h1>
-			{{ content | safe }}
+{% block aside %}{% endblock %}
+{% block mainClass %}max-w-5xl{% endblock %}
 
-			<h2>Guides</h2>
-			<ul>
-			{% for post in collections.guide %}
-				<li>
-					<a class="italic font-bold" href="{{ post.url }}">{{ post.data.title }}</a> by {{ post.data.author }}
-					<div class="p-0 m-0 text-sm">
-						{% for tag in post.data.tags | sort %}
-							{% if tag != "guide" %}
-								<span class="font-mono mr-3 p-1 pl-2 pr-2 bg-slate-400 font-bold text-white">{{ tag }}</span>
-							{% endif %}
-						{% endfor %}
-					</div>
-				</li>
+{% block article %}
+	{{ content | safe }}
+
+	<h2 id="guides">Guides</h2>
+	<p>Step-by-step walkthroughs for getting things done on Hex and related systems.</p>
+	<div class="not-prose grid gap-4 sm:grid-cols-2">
+	{% for post in collections.guide %}
+		<a class="card-link flex flex-col gap-2" href="{{ post.url }}">
+			<span class="font-semibold leading-snug text-base-content">{{ post.data.title }}</span>
+			<span class="text-sm text-base-content/60">By {{ post.data.author }}</span>
+			<span class="mt-auto flex flex-wrap gap-1.5 pt-2">
+			{% for tag in post.data.tags | sort %}
+				{% if tag != "guide" %}<span class="badge badge-sm badge-ghost font-mono">{{ tag }}</span>{% endif %}
 			{% endfor %}
-			</ul>
-
-			<h2>Articles</h2>
-			<ul>
-			{% for post in collections.article %}
-				<li><a class="italic" href="{{ post.url }}">{{ post.data.title }}</a> by {{ post.data.author }}</li>
-			{% endfor %}
-			</ul>
-		</article>
+			</span>
+		</a>
+	{% endfor %}
 	</div>
-</div>
+
+	<h2 id="articles">Articles</h2>
+	<p>Background reading, comparisons and notes.</p>
+	<div class="not-prose grid gap-4 sm:grid-cols-2">
+	{% for post in collections.article %}
+		<a class="card-link flex flex-col gap-2" href="{{ post.url }}">
+			<span class="font-semibold leading-snug text-base-content">{{ post.data.title }}</span>
+			<span class="text-sm text-base-content/60">By {{ post.data.author }}</span>
+		</a>
+	{% endfor %}
+	</div>
 {% endblock %}

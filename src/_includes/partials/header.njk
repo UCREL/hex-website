@@ -1,0 +1,31 @@
+<header class="sticky top-0 z-40 border-b border-base-300 bg-base-100/85 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-[90rem] items-center gap-3 px-4 sm:px-6">
+        <label for="nav-drawer" class="btn btn-sm btn-square btn-ghost lg:hidden" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+        </label>
+
+        <a href="/" class="flex shrink-0 items-center gap-2.5">
+            <img src="/assets/img/logos/ucrel.png" alt="UCREL" class="h-8 w-auto rounded-[4px]">
+            <span class="text-[1.05rem] font-semibold tracking-tight">Hex</span>
+            <span class="badge badge-sm badge-soft badge-primary hidden font-medium sm:inline-flex">Phase 3</span>
+        </a>
+
+        <button type="button" data-search-open class="ml-auto flex h-9 w-full max-w-64 items-center gap-2 rounded-field border border-base-300 bg-base-200/60 px-3 text-sm text-base-content/55 transition hover:border-base-content/25 md:ml-8 md:max-w-72" aria-label="Search the documentation">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
+            <span class="truncate">Search docs…</span>
+            <kbd class="kbd kbd-xs ml-auto hidden sm:inline-flex" data-search-shortcut>Ctrl K</kbd>
+        </button>
+
+        <nav class="ml-auto hidden items-center gap-1 text-sm md:flex" aria-label="Service links">
+            <a href="https://status.ucrel-hex.scc.lancs.ac.uk" class="btn btn-sm btn-ghost font-medium" target="_blank" rel="noopener">Status</a>
+            <a href="https://ucrel-hex.scc.lancs.ac.uk/grafana" class="btn btn-sm btn-ghost hidden font-medium xl:inline-flex" target="_blank" rel="noopener">Metrics</a>
+        </nav>
+
+        <button type="button" class="btn btn-sm btn-square btn-ghost shrink-0" data-theme-toggle aria-label="Toggle dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="size-5 dark:hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="hidden size-5 dark:block"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>
+        </button>
+
+        <a href="https://forms.cloud.microsoft/e/qhzG7ZSWTd" class="btn btn-sm btn-primary hidden shrink-0 sm:inline-flex">Request access</a>
+    </div>
+</header>

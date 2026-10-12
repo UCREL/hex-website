@@ -1,0 +1,57 @@
+# Sidebar navigation. Sections render in order; each item needs a title and url
+# (urls should end in a trailing slash to match Eleventy's page.url).
+# Optional item keys: badge (text), badgeStyle (warning|error|info), retired (true)
+# Optional section key: collection (appends every page in that collection)
+
+- title: Getting started
+  items:
+    - title: Home
+      url: /
+    - title: Request access
+      url: https://forms.cloud.microsoft/e/qhzG7ZSWTd
+      external: true
+    - title: Hardware information
+      url: /pages/hardware/
+
+- title: Slurm batch service
+  badge: Beta
+  badgeStyle: warning
+  items:
+    - title: Overview and terms
+      url: /pages/slurm/
+    - title: Connecting over SSH
+      url: /pages/slurm/connecting/
+    - title: Connecting with VSCode
+      url: /pages/slurm/using-vscode/
+    - title: Basic Linux tools
+      url: /pages/slurm/basic-linux-tools/
+    - title: Running jobs on Slurm
+      url: /pages/slurm/running-jobs/
+    - title: Python virtual environments
+      url: /pages/slurm/python/virtual-environments/
+    - title: Undergraduate terms of use
+      url: /pages/undergraduate-terms-of-use/
+
+- title: Guides
+  url: /pages/articles/
+  collection: guide
+
+- title: Articles
+  url: /pages/articles/
+  collection: article
+
+- title: About Hex
+  items:
+    - title: Project catalogue
+      url: /pages/projects/
+    - title: Publications
+      url: /pages/publications/
+    - title: History
+      url: /pages/history/
+    - title: People
+      url: /pages/about/
+    - title: Jupyter notebooks
+      url: /pages/jupyter/
+      badge: Offline
+      badgeStyle: error
+      retired: true
