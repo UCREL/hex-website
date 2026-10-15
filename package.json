@@ -22,7 +22,7 @@
     "build:search": "pagefind --site dist"
   },
   "dependencies": {
-    "csv-parse": "^6.2.1",
+    "csv-parse": "^7.0.3",
     "js-yaml": "^4.1.0"
   }
 }
