@@ -1,0 +1,9 @@
+
+[2m[36m[1m=================================== Training ===================================[0m
+[91m[1m================================ HALT // ERROR =================================[0m
+[2m[36m[1mTest Results:[0m
+  - [91m[1m<Test> Loss is finite: [✘] Failed - Loss is NaN, so training has diverged[0m
+
+Traceback (most recent call last):
+  ...
+AssertionError: Unit test '<Test> Loss is finite' failed: Loss is NaN, so training has diverged

@@ -1,0 +1,8 @@
+
+[2m[36m[1m================================ Sanity checks =================================[0m
+[2m[36m[1m==================== END: Sanity checks, Time: 0.0 seconds =====================[0m
+
+[2m[36m[1mTest Results:[0m
+  - [92m[1m<Assertion> Dataset is not empty: [✔] Passed[0m
+  - [91m[1m<Assertion> Dataset is large enough: [✘] Failed - Expected at least 5000 rows[0m
+

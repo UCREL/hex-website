@@ -53,6 +53,52 @@ module.exports = function(eleventyConfig) {
         return Array.isArray( tags ) && Array.isArray( wanted ) && wanted.some( tag => tags.includes( tag ) );
     } );
 
+    // Terminal output: {% terminal "name", "command" %} renders src/_includes/terminal/name.ansi,
+    // converting ANSI colour codes into styled spans (see .terminal in main.css)
+    const escapeHtml = (text) => text.replace( /&/g, "&amp;" ).replace( /</g, "&lt;" ).replace( />/g, "&gt;" );
+
+    function ansiToHtml( text ) {
+        const state = { bold: false, dim: false, italic: false, underline: false, strike: false, fg: null };
+        let html = "";
+        let open = false;
+
+        for( const part of text.split( /(\x1b\[[0-9;]*m)/ ) ) {
+            const sgr = part.match( /^\x1b\[([0-9;]*)m$/ );
+            if( !sgr ) {
+                html += escapeHtml( part );
+                continue;
+            }
+            for( const code of (sgr[1] || "0").split( ";" ).map( Number ) ) {
+                if( code === 0 ) Object.assign( state, { bold: false, dim: false, italic: false, underline: false, strike: false, fg: null } );
+                else if( code === 1 ) state.bold = true;
+                else if( code === 2 ) state.dim = true;
+                else if( code === 3 ) state.italic = true;
+                else if( code === 4 ) state.underline = true;
+                else if( code === 9 ) state.strike = true;
+                else if( code === 22 ) state.bold = state.dim = false;
+                else if( code === 39 ) state.fg = null;
+                else if( (code >= 30 && code <= 37) || (code >= 90 && code <= 97) ) state.fg = code;
+            }
+            const classes = [ "bold", "dim", "italic", "underline", "strike" ].filter( key => state[key] ).map( key => `ansi-${key}` );
+            if( state.fg !== null )
+                classes.push( `ansi-fg-${state.fg}` );
+            if( open )
+                html += "</span>";
+            open = classes.length > 0;
+            if( open )
+                html += `<span class="${classes.join( " " )}">`;
+        }
+        return html + (open ? "</span>" : "");
+    }
+
+    eleventyConfig.addShortcode( "terminal", function( name, command ) {
+        const file = path.join( __dirname, "src", "_includes", "terminal", `${name}.ansi` );
+        const output = fs.readFileSync( file, "utf-8" ).replace( /^\n+/, "" ).trimEnd();
+        const prompt = command ? `<span class="term-prompt">$</span> <span class="term-command">${escapeHtml( command )}</span>\n` : "";
+        return `<pre class="terminal" aria-label="Terminal output">${prompt}${ansiToHtml( output )}</pre>`;
+    } );
+    eleventyConfig.addWatchTarget( "./src/_includes/terminal/" );
+
     eleventyConfig.addGlobalData( "build", { year: new Date().getFullYear() } );
     
     // Shortcodes

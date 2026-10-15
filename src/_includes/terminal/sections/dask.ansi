@@ -1,0 +1,15 @@
+Local cluster dashboard available at: http://127.0.0.1:8787/status
+
+[2m[36m[1m============================== Summarise dataset ===============================[0m
+[2m[36m[1m[<Timer> Load and filter - Started Timer][0m
+[2m[36m[1m[Time 1.04 seconds][0m
+[2m[36m[1m[<Timer> Group by name - Started Timer][0m
+[2m[36m[1m[Time 0.83 seconds][0m
+[2m[36m[1m================== END: Summarise dataset, Time: 1.88 seconds ==================[0m
+
+[2m[36m[1mTest Results:[0m
+  - [92m[1m<Timer> Load and filter: [✔] Passed - Complete in 1.04 seconds[0m
+  - [92m[1m<Timer> Group by name: [✔] Passed - Complete in 0.83 seconds[0m
+  - [92m[1m<Report> Groups: [✔] Passed - 26[0m
+  - [92m[1m<Assertion> Means in range: [✔] Passed[0m
+

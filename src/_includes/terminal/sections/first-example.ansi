@@ -1,0 +1,12 @@
+
+[2m[36m[1m================================= Loading data =================================[0m
+[2m[36m[1m[<Timer> Read dataset - Started Timer][0m
+[2m[36m[1m[Time 0.51 seconds][0m
+[2m[36m[1m==================== END: Loading data, Time: 0.51 seconds =====================[0m
+
+[2m[36m[1mTest Results:[0m
+  - [92m[1m<Timer> Read dataset: [✔] Passed - Complete in 0.51 seconds[0m
+      - [2m[36mLoaded 1000 rows[0m
+  - [92m[1m<Assertion> Dataset is not empty: [✔] Passed[0m
+  - [92m[1m<Report> Columns: [✔] Passed - id, text, label[0m
+

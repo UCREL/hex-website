@@ -316,6 +316,14 @@ pre.nostyle {
     font-family: var(--font-mono);
 }
 
+/* Show code exactly as typed: no ligatures (JetBrains Mono would otherwise draw != as a single glyph) */
+code,
+kbd,
+pre {
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "calt" 0;
+}
+
 pre.nostyle {
     @apply px-5 py-4 font-mono;
 }
@@ -391,6 +399,69 @@ pre.nostyle {
     color: inherit;
     opacity: 0.8;
 }
+
+/* Terminal output (from the `terminal` shortcode): always a dark terminal, whatever the site theme */
+.prose pre.terminal,
+pre.terminal {
+    --term-bg: #1e1e1e;
+    --term-fg: #cccccc;
+    position: relative;
+    overflow-x: auto;
+    margin: 1.25em 0 1.75em;
+    padding: 2.75rem 1.25rem 1.1rem;
+    border: 1px solid #333842;
+    border-radius: var(--radius-box);
+    background: var(--term-bg);
+    color: var(--term-fg);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.55;
+    white-space: pre;
+    box-shadow: 0 8px 24px -12px rgb(0 0 0 / 0.45);
+}
+
+/* Window title bar with the usual three dots */
+pre.terminal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.9rem;
+    border-bottom: 1px solid #333842;
+    background:
+        radial-gradient(circle at 1.1rem 50%, #ff5f57 0.3rem, transparent 0.32rem),
+        radial-gradient(circle at 1.9rem 50%, #febc2e 0.3rem, transparent 0.32rem),
+        radial-gradient(circle at 2.7rem 50%, #28c840 0.3rem, transparent 0.32rem),
+        #2a2d34;
+}
+
+pre.terminal .term-prompt { color: #23d18b; }
+pre.terminal .term-command { color: #e5e5e5; }
+
+pre.terminal .ansi-bold { font-weight: 700; }
+pre.terminal .ansi-dim { opacity: 0.7; }
+pre.terminal .ansi-italic { font-style: italic; }
+pre.terminal .ansi-underline { text-decoration: underline; }
+pre.terminal .ansi-strike { text-decoration: line-through; }
+
+/* A common dark terminal palette (VSCode's integrated terminal) */
+pre.terminal .ansi-fg-30 { color: #000000; }
+pre.terminal .ansi-fg-31 { color: #cd3131; }
+pre.terminal .ansi-fg-32 { color: #0dbc79; }
+pre.terminal .ansi-fg-33 { color: #e5e510; }
+pre.terminal .ansi-fg-34 { color: #2472c8; }
+pre.terminal .ansi-fg-35 { color: #bc3fbc; }
+pre.terminal .ansi-fg-36 { color: #11a8cd; }
+pre.terminal .ansi-fg-37 { color: #e5e5e5; }
+pre.terminal .ansi-fg-90 { color: #666666; }
+pre.terminal .ansi-fg-91 { color: #f14c4c; }
+pre.terminal .ansi-fg-92 { color: #23d18b; }
+pre.terminal .ansi-fg-93 { color: #f5f543; }
+pre.terminal .ansi-fg-94 { color: #3b8eea; }
+pre.terminal .ansi-fg-95 { color: #d670d6; }
+pre.terminal .ansi-fg-96 { color: #29b8db; }
+pre.terminal .ansi-fg-97 { color: #e5e5e5; }
 
 /* Quotes */
 .prose blockquote {

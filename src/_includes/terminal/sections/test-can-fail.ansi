@@ -1,0 +1,9 @@
+
+[2m[36m[1m=============================== Validate labels ================================[0m
+[91m[1m<Test> No missing labels: ✘ Failed[0m
+[91m[1m<Test> No missing labels:     - Error: Unit test '<Test> No missing labels' failed: 1 rows have no label[0m
+[2m[36m[1m=================== END: Validate labels, Time: 0.0 seconds ====================[0m
+
+[2m[36m[1mTest Results:[0m
+  - [91m[1m<Test> No missing labels: [✘] Failed - Unit test '<Test> No missing labels' failed: 1 rows have no label[0m
+

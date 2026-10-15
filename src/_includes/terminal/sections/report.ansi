@@ -1,0 +1,8 @@
+
+[2m[36m[1m=================================== Evaluate ===================================[0m
+[2m[36m[1m======================= END: Evaluate, Time: 0.0 seconds =======================[0m
+
+[2m[36m[1mTest Results:[0m
+  - [92m[1m<Report> Accuracy: [✔] Passed - 91.3%[0m
+  - [92m[1m<Report> Model: [✔] Passed - logistic regression, C=1.0[0m
+

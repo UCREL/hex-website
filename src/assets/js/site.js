@@ -63,7 +63,7 @@
 
     /* Copy buttons on code blocks */
     document.querySelectorAll( ".prose pre, pre.nostyle" ).forEach( pre => {
-        if( pre.querySelector( "code.language-mermaid" ) )
+        if( pre.querySelector( "code.language-mermaid" ) || pre.classList.contains( "terminal" ) )
             return;
 
         const wrapper = document.createElement( "div" );
