@@ -13,7 +13,7 @@
       external: true
     - title: Hardware information
       url: /pages/hardware/
-    - title: Guides and articles
+    - title: Guides and Articles
       url: /pages/articles/
       highlightTags: [guide, article]
 
